@@ -72,7 +72,7 @@ EN
   - 9 modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.
   - Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.
   - The bot handled 10 to 30 invoices a day, peak 60.
-  - Built solo from scratch with Claude Code on Opus 4.8. MVP in 3 to 4 weeks.
+  - Built solo from scratch with Claude Code on Opus 4.8. MVP in 5 days: 5 sessions of 6 hours.
   - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
   - The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.
   - 0 wrong catalog matches on 124 lines of 20 synthetic invoices: an unreadable name goes to review instead of a guess. $0.003 to $0.026 per invoice across 3 models.
@@ -86,7 +86,7 @@ RU
   - 9 модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.
   - Telegram-бот читал фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставлял строки с живым каталогом и ставил в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.
   - Бот обрабатывал 10-30 накладных в день, пик 60.
-  - Собрал один с нуля в Claude Code на Opus 4.8. MVP за 3-4 недели.
+  - Собрал один с нуля в Claude Code на Opus 4.8. MVP за 5 дней: 5 сессий по 6 часов.
   - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
   - Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.
   - 0 ошибочных сопоставлений с каталогом на 124 строках 20 синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. $0.003-0.026 за накладную на 3 моделях.
@@ -213,35 +213,35 @@ RU
 
 ## Scene modes
 
-Labels of the mode switch in each project scene, in segment order. Desktop = 600 px and wider; Phone = capsule below 600 px.
+Labels of the mode switch in each project scene, in segment order. Phones show the same captures and labels in a capsule below 600 px.
 
 01 Floor plan pipeline
-- EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor | EN phone: Floor plan, 2BR 2201, Studio 1005
-- RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры | RU phone: План этажа, 2BR 2201, Студия 1005
+- EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor
+- RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры
 
 02 Trade System
-- EN desktop: Sales, AI inbox, Trip, Price list | EN phone: Settlements, Sales
-- RU desktop: Продажи, AI-инбокс, Рейс, Прайс-лист | RU phone: Взаиморасчёты, Продажи
+- EN desktop: Sales, AI inbox, Trip, Price list
+- RU desktop: Продажи, AI-инбокс, Рейс, Прайс-лист
 
 03 Telegram store
-- EN desktop: Catalog, Search, Lot, Design board | EN phone: Catalog, Filters, Lot, Request
-- RU desktop: Каталог, Поиск, Лот, Доска дизайна | RU phone: Каталог, Фильтры, Лот, Заявка
+- EN desktop: Catalog, Search, Lot, Design board
+- RU desktop: Каталог, Поиск, Лот, Доска дизайна
 
 04 Content Factory
-- EN desktop: Scenes, Subtitles, Clips, Trim | EN phone: Scenes, Subtitles, Clips
-- RU desktop: Сцены, Субтитры, Клипы, Обрезка | RU phone: Сцены, Субтитры, Клипы
+- EN desktop: Scenes, Subtitles, Clips, Trim
+- RU desktop: Сцены, Субтитры, Клипы, Обрезка
 
 05 26 MAISI
-- EN desktop: 3D, Floor plans, Grid, Unit, CRM | EN phone: 3D, Floor plans, Unit
-- RU desktop: 3D, Планы этажей, Шахматка, Квартира, CRM | RU phone: 3D, Планы этажей, Квартира
+- EN desktop: 3D, Floor plans, Grid, Unit, CRM
+- RU desktop: 3D, Планы этажей, Шахматка, Квартира, CRM
 
 06 AI video production
-- EN desktop: Copper, Stone, Porcelain, Technics, Storyboard | EN phone: Copper, Stone, Porcelain
-- RU desktop: Медь, Камень, Фарфор, Technics, Раскадровка | RU phone: Медь, Камень, Фарфор
+- EN desktop: Copper, Stone, Porcelain, Technics, Storyboard
+- RU desktop: Медь, Камень, Фарфор, Technics, Раскадровка
 
 07 matscout
-- EN desktop: Result, Agent steps, Table, Diagram, 3D | EN phone: Result, 3D
-- RU desktop: Результат, Шаги агента, Таблица, Диаграмма, 3D | RU phone: Результат, 3D
+- EN desktop: Result, Agent steps, Table, Diagram, 3D
+- RU desktop: Результат, Шаги агента, Таблица, Диаграмма, 3D
 
 ---
 

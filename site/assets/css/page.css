@@ -226,11 +226,11 @@ b, strong { font-weight: var(--font-weight-semibold); }
   /* plan drawings on the scene grey sit in the middle of the phone scene */
   .project[data-mpos="center"] .stack--m .shot { object-position: 50% 50%; }
   /* plan drawings: the phone frames are 4:5, so the scene takes that height instead of the tall portrait one */
-  .project[data-mpos="center"] .scene { height: auto; }
-  .project[data-mpos="center"] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  .project[data-shape="portrait"][data-mpos="center"] .scene { height: auto; }
+  .project[data-shape="portrait"][data-mpos="center"] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
   /* phone stills are 4:5: they fill the scene width edge to edge, the capsule keeps its own band below, off the photo */
-  .project[data-bleed] .scene { height: auto; }
-  .project[data-bleed] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: 0 0 calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  .project[data-shape="portrait"][data-bleed] .scene { height: auto; }
+  .project[data-shape="portrait"][data-bleed] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: 0 0 calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
   .project[data-bleed] .stack--m .shot { object-fit: cover; object-position: 50% 50%; }
   .project[data-shape="landscape"] .scene__box { margin: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
   .project[data-shape="landscape"]:not(:has(.capsule)) .scene__box { margin-bottom: var(--layout-scene-inset-mobile); }
