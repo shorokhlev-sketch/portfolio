@@ -180,7 +180,7 @@ PROJECTS = [
         ],
         # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
         'desk': [('3d', '3D', '3D'), ('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
-                 ('unit-detail', 'Unit', 'Квартира'), ('crm-agent', 'CRM', 'CRM')],
+                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM')],
         'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {
