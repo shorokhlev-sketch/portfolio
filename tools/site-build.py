@@ -28,7 +28,7 @@ SITE = {
             ('Accounting and sales.', 'Stock, settlements and leads in one system. Every lead is tracked to its source.'),
             ('Launch and upkeep.', 'Server, domain, a backup before every update. **7** services run on one server today.'),
         ],
-        'tg': 'Telegram @prfowax', 'gh': 'GitHub',
+        'tg': 'Telegram @prfowax', 'mail': 'levsk@icloud.com', 'gh': 'GitHub',
         'close': 'Close', 'prev': 'Previous', 'next': 'Next',
     },
     'ru': {
@@ -40,7 +40,7 @@ SITE = {
             ('Учёт и продажи.', 'Склад, взаиморасчёты и заявки в одной системе. У каждой заявки виден источник.'),
             ('Запуск и сопровождение.', 'Сервер, домен, бэкап перед каждым обновлением. **7** сервисов сейчас работают на одном сервере.'),
         ],
-        'tg': 'Telegram @prfowax', 'gh': 'GitHub',
+        'tg': 'Telegram @prfowax', 'mail': 'levsk@icloud.com', 'gh': 'GitHub',
         'close': 'Закрыть', 'prev': 'Назад', 'next': 'Далее',
     },
 }
@@ -48,38 +48,7 @@ STACK_ALL = 'Claude Code, Codex, Claude and OpenAI APIs, MCP, Python, TypeScript
 
 PROJECTS = [
     {
-        'n': '01', 'slug': 'floorplans', 'title': 'Floor plan pipeline', 'title_ru': 'Конвейер планировок',
-        'kind': {'en': 'Agent pipeline, client project', 'ru': 'Агентный конвейер, клиентский проект'},
-        'result': {'en': 'Turns a **114** page architectural PDF into clean vector plans for **279** apartments on **25** floors.',
-                   'ru': 'Превращает архитектурный PDF на **114** страниц в чистые векторные планы **279** квартир на **25** этажах.'},
-        'facts': {'en': [
-            'Reads PDF layers instead of guessing by color: **39k** objects per floor down to **1.9k**.',
-            'Areas match the official schedule within **0.05 m²**.',
-            '**5** Sonnet agents in parallel close **25** floors in about **2** minutes.',
-            'Manual edits in Figma are diffed by object ID and become batch rules for the next run.',
-            'Every write passes a **3** second Playwright render check. Snapshot at every stage.'],
-            'ru': [
-            'Читает слои PDF вместо угадывания по цвету: **39 тыс.** объектов на этаж сжимаются до **1,9 тыс.**',
-            'Площади сходятся с официальной экспликацией до **0,05 м²**.',
-            '**5** агентов Sonnet параллельно закрывают **25** этажей примерно за **2** минуты.',
-            'Ручные правки в Figma сравниваются по ID объектов и становятся пакетными правилами для следующего прогона.',
-            'Каждая запись проходит **3**-секундную проверку рендера в Playwright. Снапшот на каждой стадии.']},
-        'stack': 'Python, PyMuPDF, shapely, Figma MCP, Playwright, Claude Code subagents.',
-        'links': [
-            # #/floors opens the floor plans view; the bare picker URL opens its 3D view (the generated tower)
-            {'href': 'https://lab.prfo.design/maisi/select.html#/floors', 'label': {'en': 'Floors live', 'ru': 'Этажи вживую'}},
-            {'href': 'https://github.com/shorokhlev-sketch/floorplan-pipeline', 'label': {'en': 'Code', 'ru': 'Код'}},
-        ],
-        'desk': [('floor-10-vector', 'Floor plan', 'План этажа'), ('unit-2201', '2BR 2201', '2BR 2201'),
-                 ('unit-1005', 'Studio 1005', 'Студия 1005'), ('raw-layers', 'PDF layers', 'Слои PDF'),
-                 ('unit-editor', 'Unit editor', 'Редактор квартиры')],
-        'mob': [('floor-10-vector', 'Floor plan', 'План этажа'), ('unit-2201', '2BR 2201', '2BR 2201'),
-                ('unit-1005', 'Studio 1005', 'Студия 1005')],
-        # plan drawings on the scene grey: the phone frames sit in the middle of the scene, not at its top
-        'mpos': 'center',
-    },
-    {
-        'n': '02', 'slug': 'trade', 'title': 'Trade System',
+        'n': '01', 'slug': 'trade', 'title': 'Trade System',
         'kind': {'en': 'Accounting system and OCR bot, client project', 'ru': 'Учётная система и OCR-бот, клиентский проект'},
         'result': {'en': 'Ran trips, purchases, stock and settlements for a produce import business. Invoices went in by photo.',
                    'ru': 'Вела рейсы, закупки, склад и взаиморасчёты импортёра овощей и фруктов. Накладные заходили фотографией.'},
@@ -109,6 +78,37 @@ PROJECTS = [
         'desk': [('ai-inbox', 'AI inbox', 'AI-инбокс'), ('sales', 'Sales', 'Продажи'),
                  ('trip', 'Trip', 'Рейс'), ('pricelist', 'Price list', 'Прайс-лист')],
         'mob': [('settlements', 'Settlements', 'Взаиморасчёты'), ('sales', 'Sales', 'Продажи')],
+    },
+    {
+        'n': '02', 'slug': 'floorplans', 'title': 'Floor plan pipeline', 'title_ru': 'Конвейер планировок',
+        'kind': {'en': 'Agent pipeline, client project', 'ru': 'Агентный конвейер, клиентский проект'},
+        'result': {'en': 'Turns a **114** page architectural PDF into clean vector plans for **279** apartments on **25** floors.',
+                   'ru': 'Превращает архитектурный PDF на **114** страниц в чистые векторные планы **279** квартир на **25** этажах.'},
+        'facts': {'en': [
+            'Reads PDF layers instead of guessing by color: **39k** objects per floor down to **1.9k**.',
+            'Areas match the official schedule within **0.05 m²**.',
+            '**5** Sonnet agents in parallel close **25** floors in about **2** minutes.',
+            'Manual edits in Figma are diffed by object ID and become batch rules for the next run.',
+            'Every write passes a **3** second Playwright render check. Snapshot at every stage.'],
+            'ru': [
+            'Читает слои PDF вместо угадывания по цвету: **39 тыс.** объектов на этаж сжимаются до **1,9 тыс.**',
+            'Площади сходятся с официальной экспликацией до **0,05 м²**.',
+            '**5** агентов Sonnet параллельно закрывают **25** этажей примерно за **2** минуты.',
+            'Ручные правки в Figma сравниваются по ID объектов и становятся пакетными правилами для следующего прогона.',
+            'Каждая запись проходит **3**-секундную проверку рендера в Playwright. Снапшот на каждой стадии.']},
+        'stack': 'Python, PyMuPDF, shapely, Figma MCP, Playwright, Claude Code subagents.',
+        'links': [
+            # #/floors opens the floor plans view; the bare picker URL opens its 3D view (the generated tower)
+            {'href': 'https://lab.prfo.design/maisi/select.html#/floors', 'label': {'en': 'Floors live', 'ru': 'Этажи вживую'}},
+            {'href': 'https://github.com/shorokhlev-sketch/floorplan-pipeline', 'label': {'en': 'Code', 'ru': 'Код'}},
+        ],
+        'desk': [('floor-10-vector', 'Floor plan', 'План этажа'), ('unit-2201', '2BR 2201', '2BR 2201'),
+                 ('unit-1005', 'Studio 1005', 'Студия 1005'), ('raw-layers', 'PDF layers', 'Слои PDF'),
+                 ('unit-editor', 'Unit editor', 'Редактор квартиры')],
+        'mob': [('floor-10-vector', 'Floor plan', 'План этажа'), ('unit-2201', '2BR 2201', '2BR 2201'),
+                ('unit-1005', 'Studio 1005', 'Студия 1005')],
+        # plan drawings on the scene grey: the phone frames sit in the middle of the scene, not at its top
+        'mpos': 'center',
     },
     {
         'n': '03', 'slug': 'tgstore', 'title': 'Telegram store', 'title_ru': 'Магазин в Telegram',
@@ -180,8 +180,9 @@ PROJECTS = [
             {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
         ],
         # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
-        'desk': [('3d', '3D', '3D'), ('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
-                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM')],
+        # 3D last (Lev 2026-09-30): its frames carry the PLACEHOLDER lattice, a buyer sees the real plans first
+        'desk': [('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
+                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM'), ('3d', '3D', '3D')],
         'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {
@@ -246,7 +247,7 @@ for L in ('en', 'ru'):
     d['title'] = s['name'] + ' | ' + s['role']
     for i, (a, b) in enumerate(s['do'], 1):
         d[f'do{i}.h'] = md(a); d[f'do{i}.t'] = md(b)
-    d['contacts.tg'] = s['tg']; d['contacts.gh'] = s['gh']
+    d['contacts.tg'] = s['tg']; d['contacts.mail'] = s['mail']; d['contacts.gh'] = s['gh']
     d['a11y.close'] = s['close']; d['a11y.prev'] = s['prev']; d['a11y.next'] = s['next']
     for p in PROJECTS:
         k = 'p' + p['n']
@@ -300,7 +301,7 @@ def img_tags(p, set_key):
             sizes = '(min-width: 1200px) calc(100vw - 522px), 100vw'
             if first:
                 # lazy for all: on phones the desktop stack is display:none and must not download.
-                # The p01 first frame is preloaded from 600 px up in <head> (PRELOAD below).
+                # The first frame of project 01 is preloaded from 600 px up in <head> (PRELOAD below).
                 load = 'loading="lazy"'
                 if p['n'] == '01':
                     PRELOAD.append(f'<link rel="preload" as="image" href="{f12}" imagesrcset="{srcset}" imagesizes="{sizes}" media="(min-width: 600px)" fetchpriority="high">')
@@ -483,6 +484,7 @@ page = f'''<!doctype html>
   <div class="container">
     <ul class="foot__links">
       <li><a class="foot__link" href="https://t.me/prfowax" target="_blank" rel="noopener" data-i18n="contacts.tg">{e(en["contacts.tg"])}</a></li>
+      <li><a class="foot__link" href="mailto:levsk@icloud.com" data-i18n="contacts.mail">{e(en["contacts.mail"])}</a></li>
       <li><a class="foot__link" href="https://github.com/shorokhlev-sketch" target="_blank" rel="noopener" data-i18n="contacts.gh">{e(en["contacts.gh"])}</a></li>
     </ul>
   </div>

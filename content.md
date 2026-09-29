@@ -37,38 +37,11 @@ RU
 
 ---
 
-## Projects (order is fixed)
+## Projects (order is fixed: Trade System first for the business buyer, Lev 2026-09-30)
 
 RU titles: a project without a RU Title line keeps its EN title in Russian.
 
-### 01 Floor plan pipeline
-
-EN
-- Kind: Agent pipeline, client project
-- Result: Turns a 114 page architectural PDF into clean vector plans for 279 apartments on 25 floors.
-- Facts:
-  - Reads PDF layers instead of guessing by color: 39k objects per floor down to 1.9k.
-  - Areas match the official schedule within 0.05 m².
-  - 5 Sonnet agents in parallel close 25 floors in about 2 minutes.
-  - Manual edits in Figma are diffed by object ID and become batch rules for the next run.
-  - Every write passes a 3 second Playwright render check. Snapshot at every stage.
-- Stack: Python, PyMuPDF, shapely, Figma MCP, Playwright, Claude Code subagents.
-- Links: Floors live https://lab.prfo.design/maisi/select.html#/floors | Code https://github.com/shorokhlev-sketch/floorplan-pipeline
-
-RU
-- Title: Конвейер планировок
-- Kind: Агентный конвейер, клиентский проект
-- Result: Превращает архитектурный PDF на 114 страниц в чистые векторные планы 279 квартир на 25 этажах.
-- Facts:
-  - Читает слои PDF вместо угадывания по цвету: 39 тыс. объектов на этаж сжимаются до 1,9 тыс.
-  - Площади сходятся с официальной экспликацией до 0,05 м².
-  - 5 агентов Sonnet параллельно закрывают 25 этажей примерно за 2 минуты.
-  - Ручные правки в Figma сравниваются по ID объектов и становятся пакетными правилами для следующего прогона.
-  - Каждая запись проходит 3-секундную проверку рендера в Playwright. Снапшот на каждой стадии.
-- Stack: same as EN.
-- Links: Этажи вживую | Код
-
-### 02 Trade System
+### 01 Trade System
 
 EN
 - Kind: Accounting system and OCR bot, client project
@@ -97,6 +70,33 @@ RU
   - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
 - Stack: same as EN.
 - Links: Демо | OCR-бот | Код OCR
+
+### 02 Floor plan pipeline
+
+EN
+- Kind: Agent pipeline, client project
+- Result: Turns a 114 page architectural PDF into clean vector plans for 279 apartments on 25 floors.
+- Facts:
+  - Reads PDF layers instead of guessing by color: 39k objects per floor down to 1.9k.
+  - Areas match the official schedule within 0.05 m².
+  - 5 Sonnet agents in parallel close 25 floors in about 2 minutes.
+  - Manual edits in Figma are diffed by object ID and become batch rules for the next run.
+  - Every write passes a 3 second Playwright render check. Snapshot at every stage.
+- Stack: Python, PyMuPDF, shapely, Figma MCP, Playwright, Claude Code subagents.
+- Links: Floors live https://lab.prfo.design/maisi/select.html#/floors | Code https://github.com/shorokhlev-sketch/floorplan-pipeline
+
+RU
+- Title: Конвейер планировок
+- Kind: Агентный конвейер, клиентский проект
+- Result: Превращает архитектурный PDF на 114 страниц в чистые векторные планы 279 квартир на 25 этажах.
+- Facts:
+  - Читает слои PDF вместо угадывания по цвету: 39 тыс. объектов на этаж сжимаются до 1,9 тыс.
+  - Площади сходятся с официальной экспликацией до 0,05 м².
+  - 5 агентов Sonnet параллельно закрывают 25 этажей примерно за 2 минуты.
+  - Ручные правки в Figma сравниваются по ID объектов и становятся пакетными правилами для следующего прогона.
+  - Каждая запись проходит 3-секундную проверку рендера в Playwright. Снапшот на каждой стадии.
+- Stack: same as EN.
+- Links: Этажи вживую | Код
 
 ### 03 Telegram store
 
@@ -220,13 +220,13 @@ RU
 
 Labels of the mode switch in each project scene, in segment order. Phones show the same captures and labels in a capsule below 600 px.
 
-01 Floor plan pipeline
-- EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor
-- RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры
-
-02 Trade System
+01 Trade System
 - EN desktop: AI inbox, Sales, Trip, Price list
 - RU desktop: AI-инбокс, Продажи, Рейс, Прайс-лист
+
+02 Floor plan pipeline
+- EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor
+- RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры
 
 03 Telegram store
 - EN desktop: Catalog, Search, Lot, Design board
@@ -237,8 +237,8 @@ Labels of the mode switch in each project scene, in segment order. Phones show t
 - RU desktop: Сцены, Субтитры, Клипы, Обрезка
 
 05 26 MAISI
-- EN desktop: 3D, Floor plans, Grid, Unit, CRM
-- RU desktop: 3D, Планы этажей, Шахматка, Квартира, CRM
+- EN desktop: Floor plans, Grid, Unit, CRM, 3D
+- RU desktop: Планы этажей, Шахматка, Квартира, CRM, 3D
 
 06 AI video production
 - EN desktop: Copper, Stone, Porcelain, Technics, Storyboard
@@ -259,10 +259,12 @@ Claude Code, Codex, Claude and OpenAI APIs, MCP, Python, TypeScript, React, Node
 
 EN
 - Telegram @prfowax https://t.me/prfowax
+- Email levsk@icloud.com mailto:levsk@icloud.com
 - GitHub https://github.com/shorokhlev-sketch
 
 RU
 - Telegram @prfowax
+- Email levsk@icloud.com
 - GitHub
 
 ## Screenshots
