@@ -72,7 +72,7 @@ EN
   - 9 modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.
   - Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.
   - The bot handled 10 to 30 invoices a day, peak 60.
-  - Built solo from scratch with Claude Code on Opus 4.8. MVP in 5 days: 5 sessions of 6 hours.
+  - Built solo with Claude Code on Opus 4.8. MVP in 5 days from scratch.
   - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
   - The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.
   - 0 wrong catalog matches on 124 lines of 20 synthetic invoices: an unreadable name goes to review instead of a guess. $0.003 to $0.026 per invoice across 3 models.
@@ -86,7 +86,7 @@ RU
   - 9 модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.
   - Telegram-бот читал фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставлял строки с живым каталогом и ставил в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.
   - Бот обрабатывал 10-30 накладных в день, пик 60.
-  - Собрал один с нуля в Claude Code на Opus 4.8. MVP за 5 дней: 5 сессий по 6 часов.
+  - Собрал один в Claude Code на Opus 4.8. MVP за 5 дней с нуля.
   - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
   - Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.
   - 0 ошибочных сопоставлений с каталогом на 124 строках 20 синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. $0.003-0.026 за накладную на 3 моделях.
