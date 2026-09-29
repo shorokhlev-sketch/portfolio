@@ -1,0 +1,196 @@
+/* Token subset copied from visual-language/tokens.css via design/SPEC.md 1.2. Do not add values. */
+:root {
+  /* breakpoints, reference only (media queries use literals) R-RESP-1 */
+  --bp-sm: 600px; --bp-md: 960px; --bp-lg: 1200px; --bp-xl: 1920px;
+
+  /* spacing R-LAYOUT-38 */
+  --space-4: 4px; --space-5: 5px; --space-8: 8px; --space-10: 10px; --space-15: 15px;
+  --space-16: 16px; --space-20: 20px; --space-24: 24px; --space-30: 30px; --space-32: 32px;
+  --space-40: 40px; --space-48: 48px; --space-64: 64px; --space-100: 100px;
+
+  /* radii R-SURFACE-2/3 */
+  --radius-0: 0; --radius-xs: 3px; --radius-sm: 4px; --radius-md: 5px; --radius-image: 6px;
+  --radius-lg: 8px; --radius-xl: 10px; --radius-track: 12px; --radius-capsule: 25px; --radius-capsule-mobile: 11.7px;
+  --radius-arrow: 20%; --radius-circle: 50%;
+
+  /* lines, blur, shadows R-SURFACE-4/8/13 */
+  --border-w: 1px; --blur-glass: 8px; --blur-header: 10px;
+  --shadow-none: none;
+  --shadow-float: 0 0 3px #D2D2D2;
+  --shadow-capsule: 0 0 10px rgba(128,128,128,.24);
+  --shadow-header-landing: 0 6px 13px rgba(0,0,0,.19);
+  --shadow-underline: inset 0 -1px 0 0 currentColor;
+
+  /* motion R-MOTION-1/2 */
+  --motion-duration-instant: 100ms; --motion-duration-fast: 150ms; --motion-duration-base: 200ms;
+  --motion-duration-button: 250ms; --motion-duration-menu: 300ms; --motion-duration-panel: 500ms;
+  --motion-duration-filter: 600ms;
+  --motion-ease-standard: ease-in-out; --motion-ease-app: cubic-bezier(.4,0,.2,1);
+  --motion-ease-panel: cubic-bezier(.25,.1,.25,1);
+  --motion-scale-spinner-hover: 1.05;
+
+  /* type families and weights R-TYPE-1/2 */
+  --font-family-landing-dark: 'Nunito Sans', 'NunitoNew', Arial, sans-serif;
+  --font-family-app: 'AppFont', 'DM Sans', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  --font-weight-light: 300; --font-weight-regular: 400; --font-weight-medium: 500;
+  --font-weight-semibold: 600; --font-weight-bold: 700;
+  --tracking-0: 0; --tracking-caption: .5px; --tracking-label: 1px; --tracking-nav-tight: -.7px;
+  --text-button-size: 14px; --text-min-size: 11px;
+  --text-measure-body: 670px; --text-measure-lead: 700px;
+
+  /* controls R-CONTROL-1 */
+  --size-control-icon: 40px; --size-control: 44px; --size-control-cta: 45px; --size-control-cta-lg: 48px;
+  --size-control-field-landing: 50px; --size-control-cta-mobile: 66px; --size-touch-min: 40px;
+
+  /* icons R-IMG-1/5 */
+  --size-icon: 24px; --size-icon-control: 21px; --size-icon-action: 14px;
+  --size-icon-spinner-hover: 30px;
+  --icon-stroke: 1.4px; --icon-stroke-strong: 2px; --icon-linecap: round;
+
+  /* app elements */
+  --size-badge-h: 22px;
+  --size-rotate-pill-w: 140px; --size-rotate-pill-h: 76px; --size-rotate-pill-pad: 16px; --size-rotate-btn: 44px;
+  --size-rotate-pill-w-mobile: 116px; --size-rotate-pill-h-mobile: 56px;
+  --size-collapse-handle-w: 24px;
+  --size-stepper-w: 48px;
+  --size-fullscreen-btn: 44px;
+
+  /* landing elements */
+  --size-hero-separator-w: 636px;
+  --size-sticky-cta-h: 73px;          /* v1.1 R-LANDING-37 */
+
+  /* layout R-LAYOUT-1..26 */
+  --layout-container-max: 1200px; --layout-container-inset: 20px; --layout-container-content: 1160px;
+  --layout-container-fluid-pad: 10px; --layout-gutter-desktop: 140px;
+  --layout-gutter-mobile: 24px; --layout-gutter-mobile-app: 20px;
+  --layout-header-h: 64px; --layout-header-btn-gap: 8px;
+  --layout-kpi-gap: 45px;
+  --layout-section-pad-top: 64px; --layout-section-pad-bottom: 58px;
+  --layout-two-col-left-w: 545px; --layout-two-col-gap-min: 39px;
+  --layout-rail-w: 460px; --layout-rail-pad: 30px; --layout-rail-content-w: 400px;
+  --layout-header-h-app: 55px;
+  --layout-scene-inset: 32px; --layout-scene-inset-left: 30px; --layout-scene-inset-mobile: 20px;
+  --layout-table-row-h: 48px;
+  --layout-segment-pad: 10px 16px; --layout-badge-pad: 2px 5px;
+  --layout-filter-gap-x: 8px; --size-filter-field-w: 196px;
+
+  /* z R-LAYOUT-37/41 */
+  --z-scene: 0; --z-scene-controls: 1; --z-scene-controls-top: 6; --z-rail: 10;
+  --z-rail-handle: 99; --z-header: 990; --z-modal: 100010;
+}
+
+[data-theme="landing-dark"] {
+  color-scheme: dark;
+  --bg-0: #161616; --bg-1: #0E0E0E; --bg-2: #1F1F1F; --bg-3: #222222;
+  --bg-light: #F7F6F3;
+  --fg-0: #FFFFFF; --fg-1: #E6E6E6; --fg-2: #BABABA; --fg-3: #868686;
+  --fg-on-light-0: #222222; --fg-on-light-1: #2A2A2A;
+  --line-1: rgba(255,255,255,.4);
+  --line-on-light: rgba(0,0,0,.25);
+  --line-on-light-hairline: #E9E9E9;
+  --line-hairline-on-dark: rgba(255,255,255,.08);
+  --line-hero-separator: rgba(255,255,255,.1);
+  --brand: #E6E6E6; --brand-hover: #D0D0D0; --on-brand: #161616;
+  --overlay-header: rgba(15,15,15,.95);
+  --overlay-modal: rgba(0,0,0,.6);
+  --overlay-ghost-hover: rgba(255,255,255,.1);
+  --overlay-tap: rgba(255,255,255,.1);
+  --btn-primary-bg: var(--brand); --btn-primary-bg-hover: var(--brand-hover); --btn-primary-fg: var(--on-brand);
+  --btn-submit-bg: #FFFFFF;
+  --btn-secondary-bg: #222222; --btn-secondary-bg-hover: #4C4C4C;
+  --btn-ghost-border: var(--line-1); --btn-ghost-border-on-light: var(--line-on-light);
+  --btn-ghost-hover-bg: var(--overlay-ghost-hover); --btn-ghost-hover-border: #FFFFFF;
+  --btn-ghost-hover-invert-bg: #222222;
+  --btn-radius-header: var(--radius-xs);
+  --focus-ring: #2015FF; --focus-ring-offset: 4px;
+  --font-family-display: var(--font-family-landing-dark);
+  --font-family-body: var(--font-family-landing-dark);
+  --font-family-nav: 'NunitoSans', var(--font-family-landing-dark);
+  --motion-duration-hover: var(--motion-duration-base);
+  --motion-ease-hover: var(--motion-ease-standard);
+
+  --text-display: 300 55px/69px var(--font-family-display);
+  --text-display-mobile: 300 36px/45px var(--font-family-display);
+  --text-h2: 300 42px/65px var(--font-family-display);
+  --text-h2-mobile: 300 26px/40px var(--font-family-display);
+  --text-lead: 300 22px/28px var(--font-family-body);
+  --text-lead-mobile: 300 16px/20px var(--font-family-body);
+  --text-lead-2: 300 16px/20px var(--font-family-body);
+  --text-body: 300 16px/25px var(--font-family-body);
+  --text-body-mobile: 300 14px/22px var(--font-family-body);
+  --text-body-sm: 300 14px/22px var(--font-family-body);
+  --text-caption: 300 12px/19px var(--font-family-body);
+  --text-label: 300 11px/14px var(--font-family-body);
+  --text-kpi: 600 20px/25px var(--font-family-body);
+  --text-kpi-mobile: 600 18px/normal var(--font-family-body);
+  --text-stat: 700 52px/81px var(--font-family-display);
+  --text-stat-mobile: 700 32px/50px var(--font-family-display);
+  --text-card-index: 300 11px/17px var(--font-family-body);
+  --text-button: 400 14px/21.7px var(--font-family-body);
+  --text-nav: 400 13px/normal var(--font-family-nav);
+  --text-nav-drawer: 700 16px/normal var(--font-family-nav);
+  --text-footer: 300 13px/20px var(--font-family-body);
+}
+
+[data-theme="app"] {
+  color-scheme: light;
+  --bg-0: #FFFFFF; --bg-1: #F5F5F5; --bg-2: #F6F7F6;
+  --bg-stepper-cell: #EEEEEE; --bg-stepper-arrow: #ECEBEB;
+  --fg-0: #162C25; --fg-2: #757575; --fg-3: #797979;
+  --line-1: rgba(34,36,38,.15); --line-2: #D6D2D2; --line-3: #E0E0E0; --line-row: #E5E5E5;
+  --line-stepper: #EEEEEE;
+  --brand: #162C25;
+  --brand-90: rgba(22,44,37,.9);        /* = rgb(from var(--brand) r g b / .9) */
+  --brand-tint-4: rgba(22,44,37,.04);   /* = rgb(from var(--brand) r g b / .04) */
+  --on-brand: #FFFFFF;
+  --badge-type-bg: var(--brand); --badge-id-bg: var(--brand); --badge-fg: var(--on-brand);   /* chapter 01: var(--brand) is the default for new products */
+  --overlay-glass-90: rgba(255,255,255,.9); --overlay-glass-80: rgba(255,255,255,.8);
+  --overlay-glass-60: rgba(255,255,255,.6); --overlay-glass-30: rgba(255,255,255,.3);
+  --overlay-tap: transparent;
+  --btn-outlined-border: var(--line-1); --btn-outlined-active-bg: var(--brand-tint-4);
+  --btn-float-bg: var(--overlay-glass-80); --btn-float-bg-hover: #FFFFFF;
+  --btn-float-disabled-bg: var(--overlay-glass-60); --btn-float-disabled-fg: #999999;
+  --segment-active-bg: var(--brand-90); --segment-active-fg: var(--on-brand);
+  --segment-idle-bg: var(--overlay-glass-90); --segment-idle-fg: var(--brand);
+  --stepper-active-bg: var(--brand); --stepper-active-fg: var(--on-brand);
+  --stepper-idle-bg: var(--bg-stepper-cell);
+  --icon-fg: var(--brand);
+  --focus-ring: var(--brand);
+  --scrollbar-thumb: rgba(0,0,0,.25);
+  --btn-radius: var(--radius-xl);
+  --font-family-display: var(--font-family-app);
+  --font-family-body: var(--font-family-app);
+  --motion-duration-hover: var(--motion-duration-button);
+  --motion-ease-hover: var(--motion-ease-app);
+
+  --text-h1: 700 26px/32px var(--font-family-display);
+  --text-h3: 600 20px/28px var(--font-family-display);
+  --text-body: 400 16px/24px var(--font-family-body);
+  --text-body-sm: 400 14px/18px var(--font-family-body);
+  --text-caption: 400 12px/18px var(--font-family-body);
+  --text-control: 400 14px/21px var(--font-family-body);
+  --text-badge: 400 12px/18px var(--font-family-body);
+  --text-button: 500 14px/24.5px var(--font-family-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-panel: 250ms;
+    --motion-duration-filter: 250ms;
+  }
+}
+
+/* Fonts, self-hosted variable woff2 (SPEC 1.3). unicode-range lines as returned by Google Fonts. */
+@font-face { font-family: 'Nunito Sans'; src: url(../fonts/nunito-sans-latin.woff2) format('woff2');
+  font-weight: 300 700; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Nunito Sans'; src: url(../fonts/nunito-sans-cyrillic.woff2) format('woff2');
+  font-weight: 300 700; font-style: normal; font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+/* AppFont = DM Sans for Latin and digits, Manrope for Cyrillic (R-TYPE-2) */
+@font-face { font-family: 'AppFont'; src: url(../fonts/dm-sans-latin.woff2) format('woff2');
+  font-weight: 400 700; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'AppFont'; src: url(../fonts/manrope-cyrillic.woff2) format('woff2');
+  font-weight: 400 700; font-style: normal; font-display: swap;
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }

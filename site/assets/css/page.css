@@ -1,0 +1,430 @@
+/* Portfolio, direction D1 "Scene and rail" with grafts from D2. Layer A shell, layer C project islands. Values from tokens.css only. */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--layout-header-h) + var(--space-8)); background: var(--bg-0); }
+body {
+  margin: 0; background: var(--bg-0); color: var(--fg-0);
+  font: var(--text-body); letter-spacing: var(--tracking-0);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: var(--overlay-tap);
+  overflow-x: clip;
+}
+/* viewport-fit=cover: keep content clear of the notch and rounded corners in landscape; env() is 0 elsewhere */
+body { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+.i18n-wait body { visibility: hidden; }
+h1, h2, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; -webkit-appearance: none; appearance: none; border-radius: 0; }
+a, button { cursor: pointer; }
+img { display: block; }
+b, strong { font-weight: var(--font-weight-semibold); }
+
+/* focus (D-7): white ring on A dark, brand ring inside C */
+:focus-visible { outline: 2px solid var(--fg-0); outline-offset: var(--focus-ring-offset); }
+[data-theme="app"] :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+/* container R-LAYOUT-1/2/3 */
+.container { width: 100%; max-width: var(--layout-container-max); margin: 0 auto; padding: 0 var(--layout-gutter-mobile); }
+@media (min-width: 960px) { .container { padding: 0 calc(var(--layout-container-fluid-pad) + var(--layout-container-inset)); } }
+@media (min-width: 1200px) { .container { padding: 0 var(--layout-container-inset); } }
+
+/* ---------------- header R-LANDING-1/2 ---------------- */
+.hdr {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--layout-header-h); z-index: var(--z-header);
+  background: var(--overlay-header);
+  -webkit-backdrop-filter: blur(var(--blur-header)); backdrop-filter: blur(var(--blur-header));
+  box-shadow: var(--shadow-header-landing); border-bottom: var(--border-w) solid var(--line-hairline-on-dark);
+}
+.hdr { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+.hdr__row { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.wordmark {
+  display: inline-flex; align-items: center; min-height: var(--size-control);
+  font: var(--text-nav-drawer); letter-spacing: var(--tracking-nav-tight); color: var(--fg-0);
+  transition: color var(--motion-duration-hover) var(--motion-ease-hover);
+}
+.hdr__right { display: flex; align-items: center; gap: var(--layout-header-btn-gap); }
+
+.lang { display: inline-flex; height: var(--size-control); background: var(--btn-secondary-bg); border-radius: var(--btn-radius-header); overflow: hidden; }
+.lang__btn {
+  min-width: var(--size-control); padding: 0 12px; height: 100%;
+  font: var(--text-nav); letter-spacing: var(--tracking-label); color: var(--fg-2);
+  transition: color var(--motion-duration-hover) var(--motion-ease-hover);
+}
+.lang__btn span { display: inline-block; }
+.lang__btn[aria-pressed="true"] { color: var(--fg-0); font-weight: var(--font-weight-bold); }
+.lang__btn[aria-pressed="true"] span { box-shadow: var(--shadow-underline); }
+.lang__btn:focus-visible { outline-offset: -2px; }
+
+.btn-tg {
+  display: inline-flex; align-items: center; height: var(--size-control); padding: 0 var(--space-20);
+  background: var(--btn-primary-bg); color: var(--btn-primary-fg); font: var(--text-button);
+  border-radius: var(--btn-radius-header);
+  transition: background-color var(--motion-duration-hover) var(--motion-ease-hover);
+}
+@media (hover: hover) and (pointer: fine) {
+  .wordmark:hover { color: var(--fg-3); }
+  .lang__btn[aria-pressed="false"]:hover { color: var(--fg-1); }
+  .btn-tg:hover { background: var(--btn-primary-bg-hover); }
+}
+
+/* ---------------- intro (D-1) ---------------- */
+.intro { background: var(--bg-0); padding: calc(var(--layout-header-h) + var(--space-100)) 0 var(--layout-section-pad-bottom); }
+.eyebrow { font: var(--text-label); text-transform: uppercase; letter-spacing: var(--tracking-label); color: var(--fg-2); }
+.display { font: var(--text-display); letter-spacing: var(--tracking-0); color: var(--fg-0); margin-top: var(--space-16); }
+.lead { font: var(--text-lead); color: var(--fg-0); max-width: var(--text-measure-lead); margin-top: var(--space-24); text-wrap: pretty; }
+.sep { width: min(100%, var(--size-hero-separator-w)); height: var(--border-w); background: var(--line-hero-separator); margin: 42px 0 var(--space-24); }
+.do { display: grid; grid-template-columns: 1fr; row-gap: var(--space-24); }
+.do strong { display: block; font: var(--text-kpi); color: var(--fg-0); }
+.do span { display: block; margin-top: var(--space-8); font: var(--text-body-sm); letter-spacing: var(--tracking-caption); color: var(--fg-2); max-width: var(--text-measure-body); }
+.do b { font-weight: var(--font-weight-semibold); }
+@media (min-width: 960px) { .do { grid-template-columns: repeat(3, 1fr); column-gap: var(--layout-kpi-gap); } }
+@media (max-width: 599px) {
+  .intro { padding: calc(var(--layout-header-h) + var(--space-40)) 0 var(--space-40); }
+  .display { font: var(--text-display-mobile); }
+  .lead { font: var(--text-lead-mobile); }
+  .sep { margin: var(--space-32) 0 var(--space-24); }
+  .do strong { font: var(--text-kpi-mobile); }
+}
+
+/* ---------------- project block, layer C ---------------- */
+/* DOM order: head (Kind, title, Result), scene, body (facts, data, stack, links).
+   Below 1200 that is the reading order; at 1200 and up head and body share the white rail on the left. */
+[data-theme="app"] { font-family: var(--font-family-app); font-size: 14px; color: var(--fg-0); -webkit-tap-highlight-color: var(--overlay-tap); }
+.project { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); background: var(--bg-0); }
+.project + .project { border-top: var(--border-w) solid var(--line-3); }
+.project b { font-weight: var(--font-weight-bold); white-space: nowrap; }
+
+.phead, .pbody { position: relative; z-index: var(--z-rail); min-width: 0; }
+.phead { padding: var(--space-24) var(--layout-gutter-mobile-app) 0; }
+.pbody { padding: var(--space-20) var(--layout-gutter-mobile-app) var(--space-32); }
+
+/* scene */
+.scene { position: relative; overflow: hidden; background: var(--bg-1); z-index: var(--z-scene); min-width: 0; }
+.scene__box { position: relative; aspect-ratio: var(--ar, 16 / 10); }
+.scene__open { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.scene__open:focus-visible { outline-offset: 3px; }
+/* bleed scenes: the button fills the clipped scene, so an outside outline is cut off; an inset ring is drawn above the stills */
+.project[data-bleed] .scene__open:focus-visible { outline: none; }
+.project[data-bleed] .scene__open:focus-visible::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  box-shadow: inset 0 0 0 2px var(--focus-ring), inset 0 0 0 4px var(--on-brand);
+}
+.stack { position: absolute; inset: 0; display: block; }
+.stack--m { display: none; }
+.shot {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; object-position: 50% 0;
+  background: var(--bg-1);
+  opacity: 0; transition: opacity var(--motion-duration-filter) var(--motion-ease-app);
+}
+.shot.is-on { opacity: 1; }
+.shot.is-top { z-index: 1; }
+
+/* stills that fill the scene edge to edge (data-bleed projects): the box stops being the positioning frame,
+   stills cover the whole scene, a UI capture in the same set keeps the box inset and is shown whole */
+.shot--bleed { object-fit: cover; object-position: 50% 50%; }
+
+/* controls strip: fullscreen square and mode switch, top right, above the capture, never over it.
+   The strip spans the scene width (transparent, click-through) so a segment set wider than the scene scrolls inside it. */
+.scene__bar {
+  position: absolute; top: var(--layout-scene-inset-mobile); right: var(--layout-scene-inset-mobile); left: var(--layout-scene-inset-mobile); z-index: var(--z-scene-controls-top);
+  display: none; align-items: center; justify-content: flex-end; gap: var(--space-8);
+  pointer-events: none;
+}
+.scene__bar > * { pointer-events: auto; }
+.fs { flex: none; }
+
+/* mode switch R-APP-16, R-CONTROL-16: labeled segments, width by text */
+.seg { display: inline-flex; min-width: 0; height: var(--size-control); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-float); background: var(--segment-idle-bg); }
+/* wider than the scene: the set scrolls sideways (wheel, touch, arrow keys move the checked segment into view), a fade marks the cut side */
+.seg.is-scroll { overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.seg.is-scroll::-webkit-scrollbar { display: none; }
+.seg[data-more="r"] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.seg[data-more="l"] { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.seg[data-more="lr"] { -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+.seg__btn { flex: none;
+  min-width: var(--size-control); padding: var(--layout-segment-pad); height: 100%;
+  display: flex; align-items: center; white-space: nowrap;
+  font: var(--text-control); color: var(--segment-idle-fg); background: var(--segment-idle-bg);
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app);
+}
+.seg__btn[aria-checked="true"] { background: var(--segment-active-bg); color: var(--segment-active-fg); font-weight: var(--font-weight-bold); }
+/* the checked segment turns bold: a hidden bold copy of the label (data-label) holds that width in every state,
+   so selecting a segment never moves its neighbours or the fullscreen square (R-PRINCIPLES-13) */
+.seg__btn { flex-direction: column; justify-content: center; }
+.seg__btn::after { content: attr(data-label); font-weight: var(--font-weight-bold); height: 0; overflow: hidden; visibility: hidden; pointer-events: none; }
+.seg__btn:focus-visible { outline-offset: -3px; outline-color: var(--brand); }
+.seg__btn[aria-checked="true"]:focus-visible { outline-color: var(--on-brand); }
+
+/* icons R-IMG-1/2/5 */
+.ico { display: block; fill: none; stroke: currentColor; stroke-width: var(--icon-stroke); stroke-linecap: round; stroke-linejoin: round; }
+
+/* fullscreen square R-IMG-21 */
+.fs {
+  width: var(--size-fullscreen-btn); height: var(--size-fullscreen-btn); display: flex; align-items: center; justify-content: center;
+  background: var(--overlay-glass-80); border-radius: var(--radius-lg); box-shadow: var(--shadow-float); color: var(--brand);
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app);
+}
+
+/* capsule R-APP-17, R-CONTROL-7 (D-5), its own band under the capture */
+.capsule {
+  position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); z-index: var(--z-scene-controls);
+  width: var(--size-rotate-pill-w); height: var(--size-rotate-pill-h); padding: var(--size-rotate-pill-pad);
+  display: none; align-items: center; justify-content: space-between;
+  background: var(--overlay-glass-30); border-radius: var(--radius-capsule); box-shadow: var(--shadow-capsule);
+}
+.capsule__btn {
+  width: var(--size-rotate-btn); height: var(--size-rotate-btn); display: flex; align-items: center; justify-content: center;
+  border-radius: var(--radius-arrow); background: var(--btn-float-bg); color: var(--brand);
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app), transform var(--motion-duration-button) var(--motion-ease-app);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .seg__btn[aria-checked="false"]:hover { background: var(--btn-float-bg-hover); }
+  .fs:hover { background: var(--btn-float-bg-hover); }
+  .capsule__btn:hover { background: var(--btn-float-bg-hover); transform: scale(var(--motion-scale-spinner-hover)); }
+}
+
+/* rail content */
+.rail__head { min-height: var(--layout-header-h-app); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-5); }
+.badge {
+  display: inline-flex; align-items: center; min-height: var(--size-badge-h); padding: var(--layout-badge-pad);
+  font: var(--text-badge); color: var(--badge-fg); border-radius: var(--radius-xs);
+}
+.badge--type { background: var(--badge-type-bg); }
+.badge--id { background: var(--badge-id-bg); }
+.rail__title { font: var(--text-h1); color: var(--fg-0); margin-top: var(--space-8); }
+.rail__result { font: var(--text-body); color: var(--fg-0); margin: 12px 0 var(--space-20); }
+.facts { border-top: var(--border-w) solid var(--line-row); }
+.facts li {
+  min-height: var(--layout-table-row-h); padding: var(--space-15) 0; border-bottom: var(--border-w) solid var(--line-row);
+  font: var(--text-body-sm); color: var(--fg-0);
+}
+.meta { font: var(--text-caption); color: var(--fg-2); margin-top: var(--space-8); }
+.facts + .meta { margin-top: var(--space-16); }
+.links { margin-top: var(--space-24); display: flex; flex-direction: column; gap: var(--layout-filter-gap-x); }
+.lrow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-8) var(--space-16); }
+.link {
+  flex: 1 1 100%; display: inline-flex; align-items: center; justify-content: center; height: var(--size-control-cta); padding: 0 var(--space-16);
+  border: var(--border-w) solid var(--btn-outlined-border); border-radius: var(--btn-radius);
+  font: var(--text-button); color: var(--brand); text-align: center;
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app);
+}
+@media (hover: hover) and (pointer: fine) { .link:hover { background: var(--btn-outlined-active-bg); } }
+/* a URL shown as text to select, not a link */
+.lplain { flex: 1 1 100%; grid-column: 1 / -1; font: var(--text-body-sm); color: var(--fg-2); overflow-wrap: anywhere; }
+.lplain code { font: inherit; color: var(--fg-0); -webkit-user-select: all; user-select: all; }
+
+/* ---- < 600: portrait or landscape scene, capsule in its own band (D1.3, 3.5) ---- */
+@media (max-width: 599px) {
+  .project[data-shape="portrait"] .scene { height: min(calc(100svh - var(--layout-header-h) - var(--size-sticky-cta-h)), 700px); }
+  .project[data-shape="portrait"] .scene__box { position: absolute; aspect-ratio: auto; inset: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  .project[data-shape="portrait"] .stack--d { display: none; }
+  .project[data-shape="portrait"] .stack--m { display: block; }
+  .project[data-shape="portrait"] .shot { object-fit: contain; }
+  /* plan drawings on the scene grey sit in the middle of the phone scene */
+  .project[data-mpos="center"] .stack--m .shot { object-position: 50% 50%; }
+  /* plan drawings: the phone frames are 4:5, so the scene takes that height instead of the tall portrait one */
+  .project[data-mpos="center"] .scene { height: auto; }
+  .project[data-mpos="center"] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  /* phone stills are 4:5: they fill the scene width edge to edge, the capsule keeps its own band below, off the photo */
+  .project[data-bleed] .scene { height: auto; }
+  .project[data-bleed] .scene__box { position: relative; inset: auto; aspect-ratio: 4 / 5; margin: 0 0 calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  .project[data-bleed] .stack--m .shot { object-fit: cover; object-position: 50% 50%; }
+  .project[data-shape="landscape"] .scene__box { margin: var(--layout-scene-inset-mobile) var(--layout-scene-inset-mobile) calc(var(--size-rotate-pill-h-mobile) + var(--space-20)); }
+  .project[data-shape="landscape"]:not(:has(.capsule)) .scene__box { margin-bottom: var(--layout-scene-inset-mobile); }
+  .capsule {
+    width: auto; min-width: var(--size-rotate-pill-w-mobile); height: var(--size-rotate-pill-h-mobile); padding: 0 var(--space-10);
+    gap: var(--space-8); border-radius: var(--radius-capsule-mobile); bottom: var(--space-10);
+  }
+  /* current mode, same words as the segment control from 600 up */
+  .capsule__label { min-width: 0; padding: 0 var(--space-4); font: var(--text-control); font-weight: var(--font-weight-bold); color: var(--brand); white-space: nowrap; text-align: center; }
+  .js .capsule { display: flex; }
+}
+
+/* ---- 600 to 1199: stacked, controls strip above the capture (D1.2, D-6, R-LAYOUT-19) ---- */
+@media (min-width: 600px) {
+  .js .scene__bar { display: flex; }
+  .phead { padding: var(--space-32) var(--layout-gutter-mobile) 0; }
+  .pbody { padding: var(--space-24) var(--layout-gutter-mobile) var(--space-40); }
+  .scene__bar { right: var(--layout-gutter-mobile); left: var(--layout-gutter-mobile); }
+  .project[data-bleed] .scene__box { position: static; }
+  /* bleed stills start under a --bg-1 band that holds the controls, so the square and the switch never sit on the photo */
+  .project[data-bleed] .shot--bleed {
+    top: calc(var(--layout-scene-inset-mobile) + var(--size-control) + var(--space-20));
+    height: calc(100% - var(--layout-scene-inset-mobile) - var(--size-control) - var(--space-20));
+  }
+  .project[data-bleed] .shot:not(.shot--bleed) {
+    top: calc(var(--layout-scene-inset-mobile) + var(--size-control) + var(--space-20)); left: var(--layout-gutter-mobile);
+    width: calc(100% - 2 * var(--layout-gutter-mobile)); height: calc(100% - var(--layout-scene-inset-mobile) * 2 - var(--size-control) - var(--space-20));
+  }
+  .phead > *, .pbody > * { max-width: var(--text-measure-body); }
+  .scene__box { margin: calc(var(--layout-scene-inset-mobile) + var(--size-control) + var(--space-20)) var(--layout-gutter-mobile) var(--layout-scene-inset-mobile); }
+  .links { display: grid; grid-template-columns: repeat(2, minmax(0, var(--size-filter-field-w))); }
+  .lrow { display: contents; }
+  .lrow--wide .link { grid-column: 1 / -1; }
+  .link { height: var(--size-control); white-space: nowrap; }
+}
+@media (min-width: 960px) {
+  .scene__bar { top: var(--layout-scene-inset); right: var(--layout-scene-inset); left: var(--layout-scene-inset-left); }
+  .project[data-bleed] .shot:not(.shot--bleed) {
+    top: calc(var(--layout-scene-inset) + var(--size-control) + var(--space-20)); left: var(--layout-scene-inset-left);
+    width: calc(100% - var(--layout-scene-inset) - var(--layout-scene-inset-left));
+    height: calc(100% - var(--layout-scene-inset) - var(--size-control) - var(--space-20) - var(--layout-scene-inset-left));
+  }
+  .project[data-bleed] .shot--bleed {
+    top: calc(var(--layout-scene-inset) + var(--size-control) + var(--space-20));
+    height: calc(100% - var(--layout-scene-inset) - var(--size-control) - var(--space-20));
+  }
+  .scene__box { margin: calc(var(--layout-scene-inset) + var(--size-control) + var(--space-20)) var(--layout-scene-inset) var(--layout-scene-inset-left) var(--layout-scene-inset-left); }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  .phead, .pbody { padding-left: var(--layout-scene-inset-left); padding-right: var(--layout-scene-inset-left); }
+}
+
+/* ---- >= 1200: rail 460 | scene (D1.1) ---- */
+@media (min-width: 1200px) {
+  .project {
+    grid-template-columns: var(--layout-rail-w) minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "head scene" "body scene";
+  }
+  .project + .project { border-top: 0; }
+  /* the white rail surface behind head and body */
+  .project::before {
+    content: ""; grid-column: 1; grid-row: 1 / 3; position: relative; z-index: var(--z-rail);
+    background: var(--bg-0); box-shadow: var(--shadow-float);
+  }
+  .project + .project::before { border-top: var(--border-w) solid var(--line-3); }
+  .phead { grid-area: head; padding: var(--layout-rail-pad) var(--layout-rail-pad) 0; }
+  .pbody { grid-area: body; padding: 0 var(--layout-rail-pad) var(--layout-rail-pad); }
+  .phead > *, .pbody > * { max-width: var(--layout-rail-content-w); }
+  .scene { grid-area: scene; }
+  /* a rail taller than the capture: the spare height splits above and below the box instead of pooling under it */
+  .scene { display: flex; flex-direction: column; justify-content: center; }
+  .scene__box { flex: none; }
+  /* the whole capture stays inside one screen under the header (a taller capture such as the 2400 x 1594 floor plan at 1920 x 1080) */
+  /* explicit width keeps the box full width when the height cap applies; the capture then centres inside it */
+  .scene__box {
+    width: calc(100% - var(--layout-scene-inset) - var(--layout-scene-inset-left));
+    max-height: calc(100svh - var(--layout-header-h) - var(--layout-scene-inset) - var(--size-control) - var(--space-20) - var(--layout-scene-inset-left));
+  }
+}
+
+/* ---------------- stack line and footer ---------------- */
+.stackline { background: var(--bg-0); padding: var(--layout-section-pad-top) 0 var(--layout-section-pad-bottom); }
+.stackline p { font: var(--text-body); color: var(--fg-2); max-width: var(--text-measure-body); }
+@media (max-width: 599px) { .stackline p { font: var(--text-body-mobile); } }
+
+.foot { background: var(--bg-1); padding: var(--layout-section-pad-top) 0 var(--layout-section-pad-bottom); }
+/* the contacts are the footer: two links set at the h2 size, hairline underline, no other line */
+.foot__links { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-16) var(--space-64); }
+.foot__link {
+  display: inline-block; font: var(--text-h2); color: var(--fg-0);
+  border-bottom: var(--border-w) solid var(--btn-ghost-border);
+  transition: border-color var(--motion-duration-hover) var(--motion-ease-hover), color var(--motion-duration-hover) var(--motion-ease-hover);
+}
+@media (hover: hover) and (pointer: fine) { .foot__link:hover { border-color: var(--btn-ghost-hover-border); } }
+
+/* mobile bottom bar R-LANDING-30/37 */
+.mbar { display: none; }
+@media (max-width: 599px) {
+  html { scroll-padding-bottom: calc(var(--size-sticky-cta-h) + env(safe-area-inset-bottom) + var(--space-8)); }
+  body { padding-bottom: calc(var(--size-sticky-cta-h) + env(safe-area-inset-bottom)); }
+  .btn-tg { display: none; }
+  .foot__links { flex-direction: column; align-items: flex-start; gap: var(--space-16); }
+  .foot__link { font: var(--text-h2-mobile); }
+  .mbar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: var(--z-header);
+    height: calc(var(--size-sticky-cta-h) + env(safe-area-inset-bottom));
+    padding: 11px var(--layout-gutter-mobile) calc(11px + env(safe-area-inset-bottom));
+    background: var(--bg-3); -webkit-backdrop-filter: blur(var(--blur-glass)); backdrop-filter: blur(var(--blur-glass));
+  }
+  .mbar__btn {
+    display: flex; align-items: center; justify-content: center; width: 100%; height: 51px;
+    background: var(--btn-submit-bg); color: var(--on-brand); font: var(--text-button); border-radius: var(--radius-0);
+  }
+}
+
+/* ---------------- detail dialog R-IMG-21 ---------------- */
+.viewer {
+  position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0;
+  background: transparent; overflow: hidden; z-index: var(--z-modal);
+  opacity: 0; transition: opacity var(--motion-duration-menu) var(--motion-ease-standard);
+}
+.viewer.is-open { opacity: 1; }
+/* the backdrop is the header's near-opaque dark, so no page text shows through the bands that hold the viewer controls;
+   it fades with the dialog */
+.viewer::backdrop { background: var(--overlay-header); opacity: 0; transition: opacity var(--motion-duration-menu) var(--motion-ease-standard); }
+.viewer.is-open::backdrop { opacity: 1; }
+.viewer__scroll {
+  display: flex; width: 100%; height: 100%; overflow: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+/* the capture sits below a dark band that holds the close button, so no control lands on the capture */
+.viewer__scroll { padding: calc(var(--size-control) + var(--space-20) * 2) var(--space-20) var(--space-20); }
+/* a scroller that pans is a tab stop: inset light ring on the dark band */
+.viewer__scroll:focus-visible { outline: 2px solid var(--on-brand); outline-offset: -2px; }
+.viewer__scroll::-webkit-scrollbar { width: 10px; height: 10px; }
+.viewer__scroll::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); }
+/* never upscaled past the file's own size; below 960 wide captures keep their height and scroll sideways, from 960 they fit the viewport */
+.viewer__img { flex: none; width: auto; height: auto; max-height: 100%; max-width: none; margin: auto; }
+@media (min-width: 960px) { .viewer__img { max-width: 100%; } }
+.viewer__close {
+  position: absolute; top: var(--space-20); right: calc(var(--space-20) + env(safe-area-inset-right)); width: var(--size-control); height: var(--size-control);
+  display: flex; align-items: center; justify-content: center; background: var(--overlay-glass-80); color: var(--brand);
+  border-radius: var(--btn-radius); box-shadow: var(--shadow-float);
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app);
+}
+@media (hover: hover) and (pointer: fine) { .viewer__close:hover { background: var(--btn-float-bg-hover); } }
+/* the dialog sits on the dark modal overlay: a light ring outside the button */
+.viewer__close:focus-visible { outline: 2px solid var(--on-brand); outline-offset: 3px; }
+
+/* paging through the project's captures: mode label and position in the top band, left of the close button */
+/* a float pill like the buttons, so it reads over whatever the modal overlay lets through */
+.viewer__meta {
+  position: absolute; top: var(--space-20); left: calc(var(--space-20) + env(safe-area-inset-left));
+  max-width: calc(100% - var(--size-control) - var(--space-20) * 3 - env(safe-area-inset-left) - env(safe-area-inset-right));
+  height: var(--size-control); padding: 0 var(--space-16); display: flex; align-items: center; gap: var(--space-8); min-width: 0;
+  font: var(--text-control); color: var(--brand); white-space: nowrap;
+  background: var(--overlay-glass-80); border-radius: var(--btn-radius); box-shadow: var(--shadow-float);
+}
+.viewer__label { font-weight: var(--font-weight-bold); overflow: hidden; text-overflow: ellipsis; }
+.viewer__pos { font-variant-numeric: tabular-nums; opacity: .7; }
+/* previous and next: the same float button as close, one on each side edge, in gutters of their own so they never cover the capture */
+.viewer__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); width: var(--size-control); height: var(--size-control);
+  display: flex; align-items: center; justify-content: center; background: var(--overlay-glass-80); color: var(--brand);
+  border-radius: var(--btn-radius); box-shadow: var(--shadow-float);
+  transition: background-color var(--motion-duration-button) var(--motion-ease-app);
+}
+.viewer__nav--prev { left: calc(var(--space-20) + env(safe-area-inset-left)); }
+.viewer__nav--next { right: calc(var(--space-20) + env(safe-area-inset-right)); }
+.viewer__nav[hidden], .viewer__pos[hidden] { display: none; }
+@media (hover: hover) and (pointer: fine) { .viewer__nav:hover { background: var(--btn-float-bg-hover); } }
+.viewer__nav:focus-visible { outline: 2px solid var(--on-brand); outline-offset: 3px; }
+.viewer.is-paged .viewer__scroll {
+  padding-left: calc(var(--size-control) + var(--space-20) * 2 + env(safe-area-inset-left));
+  padding-right: calc(var(--size-control) + var(--space-20) * 2 + env(safe-area-inset-right));
+}
+/* below 600 the side gutters would eat the phone capture: the buttons sit at the left and right ends of a bottom band */
+@media (max-width: 599px) {
+  .viewer__nav { top: auto; transform: none; bottom: calc(var(--space-20) + env(safe-area-inset-bottom)); }
+  .viewer.is-paged .viewer__scroll {
+    padding-left: 0; padding-right: 0;
+    padding-bottom: calc(var(--size-control) + var(--space-20) * 2 + env(safe-area-inset-bottom));
+  }
+  /* a phone capture is shown whole, edge to edge (the 4:5 frames would otherwise be height-bound and cut at the sides) */
+  .viewer[data-set="m"] .viewer__img { max-width: 100%; }
+}
+/* a horizontal swipe pages; vertical panning stays with the browser */
+.viewer__scroll { touch-action: pan-y pinch-zoom; }
+.viewer.is-pannable .viewer__scroll { touch-action: pan-x pan-y pinch-zoom; }
+
+/* reduced motion R-MOTION-34 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .viewer, .viewer::backdrop { transition: none; }
+  .capsule__btn:hover { transform: none; }
+}
