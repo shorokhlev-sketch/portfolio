@@ -197,7 +197,7 @@ PROJECTS = [
             'Раскадровка с шиной задач: кнопка на кадре будит Claude, и он забирает задачу. После **16** правил оператора потери кредитов упали примерно с трети до нуля.']},
         'stack': 'Higgsfield CLI, Nano Banana Pro, Seedream 5, Seedance 2.0 and 2.5, Kling 3.0, Palmier over MCP, Claude Code skills, Node.js.',
         'links': [
-            {'href': 'https://prfo.design', 'label': {'en': 'Visuals', 'ru': 'Визуал'}},
+            {'href': 'https://prfo.design/visual/', 'label': {'en': 'Visuals', 'ru': 'Визуал'}},
             {'href': 'https://github.com/shorokhlev-sketch/ai-video-pipeline', 'label': {'en': 'Code', 'ru': 'Код'}},
         ],
         # stills fill the scene edge to edge ('bleed'); the storyboard is a UI capture and stays whole inside the scene inset

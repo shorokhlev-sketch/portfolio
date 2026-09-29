@@ -173,7 +173,7 @@ EN
   - Technics SB-MX200 spec film: 27 seconds cut from 38 generated clips. The choice between Seedance and Kling is settled by measured motion, not taste.
   - Storyboard with a job bus: a button on a shot wakes Claude, which picks up the job. After 16 operator rules, credit waste fell from about a third to zero.
 - Stack: Higgsfield CLI, Nano Banana Pro, Seedream 5, Seedance 2.0 and 2.5, Kling 3.0, Palmier over MCP, Claude Code skills, Node.js.
-- Links: Visuals https://prfo.design | Code https://github.com/shorokhlev-sketch/ai-video-pipeline
+- Links: Visuals https://prfo.design/visual/ | Code https://github.com/shorokhlev-sketch/ai-video-pipeline
 
 RU
 - Kind: AI-изображения и видео на Higgsfield
