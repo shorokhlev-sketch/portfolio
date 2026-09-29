@@ -138,12 +138,14 @@
           <li data-i18n="p02.fact3">The bot handled <b>10 to 30</b> invoices a day, peak <b>60</b>.</li>
           <li data-i18n="p02.fact4">Built solo from scratch with Claude Code on Opus 4.8. MVP in <b>3 to 4</b> weeks.</li>
           <li data-i18n="p02.fact5">Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.</li>
-          <li data-i18n="p02.fact6">The client bought out the code, so it is not public. I walk through the architecture on request.</li>
+          <li data-i18n="p02.fact6">The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.</li>
+          <li data-i18n="p02.fact7"><b>0</b> wrong catalog matches on <b>124</b> lines of <b>20</b> synthetic invoices: an unreadable name goes to review instead of a guess. <b>$0.003 to $0.026</b> per invoice across 3 models.</li>
         </ul>
         <p class="meta meta--solo">React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.</p>
         <div class="links">
           <div class="lrow"><a class="link" href="https://lab.prfo.design/trade/" target="_blank" rel="noopener" data-i18n="p02.link1">Demo</a></div>
           <div class="lrow"><a class="link" href="https://t.me/formagicowbot" target="_blank" rel="noopener" data-i18n="p02.link2">OCR bot</a></div>
+          <div class="lrow"><a class="link" href="https://github.com/shorokhlev-sketch/invoice-ocr" target="_blank" rel="noopener" data-i18n="p02.link3">OCR code</a></div>
         </div>
       </div>
     </section>

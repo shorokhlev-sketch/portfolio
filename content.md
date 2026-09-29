@@ -74,9 +74,10 @@ EN
   - The bot handled 10 to 30 invoices a day, peak 60.
   - Built solo from scratch with Claude Code on Opus 4.8. MVP in 3 to 4 weeks.
   - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
-  - The client bought out the code, so it is not public. I walk through the architecture on request.
+  - The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.
+  - 0 wrong catalog matches on 124 lines of 20 synthetic invoices: an unreadable name goes to review instead of a guess. $0.003 to $0.026 per invoice across 3 models.
 - Stack: React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.
-- Links: Demo https://lab.prfo.design/trade/ | OCR bot https://t.me/formagicowbot
+- Links: Demo https://lab.prfo.design/trade/ | OCR bot https://t.me/formagicowbot | OCR code https://github.com/shorokhlev-sketch/invoice-ocr
 
 RU
 - Kind: Учётная система и OCR-бот, клиентский проект
@@ -87,9 +88,10 @@ RU
   - Бот обрабатывал 10-30 накладных в день, пик 60.
   - Собрал один с нуля в Claude Code на Opus 4.8. MVP за 3-4 недели.
   - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
-  - Код выкуплен клиентом, поэтому не публикуется. Архитектуру и устройство расскажу по запросу.
+  - Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.
+  - 0 ошибочных сопоставлений с каталогом на 124 строках 20 синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. $0.003-0.026 за накладную на 3 моделях.
 - Stack: same as EN.
-- Links: Демо | OCR-бот
+- Links: Демо | OCR-бот | Код OCR
 
 ### 03 Telegram store
 
