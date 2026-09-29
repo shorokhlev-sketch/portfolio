@@ -66,27 +66,27 @@ RU
 ### 02 Trade System
 
 EN
-- Kind: Accounting system and OCR bot, in production
-- Result: Runs trips, purchases, stock and settlements for a produce import business. Invoices go in by photo.
+- Kind: Accounting system and OCR bot, client project
+- Result: Ran trips, purchases, stock and settlements for a produce import business. Invoices went in by photo.
 - Facts:
   - 9 modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.
-  - Telegram bot reads photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matches lines to the live catalog and queues them for approval. The public demo bot runs the same flow on GPT-4o Vision.
-  - 10 to 30 invoices a day, peak 60.
+  - Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.
+  - The bot handled 10 to 30 invoices a day, peak 60.
   - Built solo from scratch with Claude Code on Opus 4.8. MVP in 3 to 4 weeks.
-  - Reverse proxy in Moscow keeps the offshore server reachable for staff in Russia.
+  - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
   - The client bought out the code, so it is not public. I walk through the architecture on request.
 - Stack: React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.
 - Links: Demo https://lab.prfo.design/trade/ | OCR bot https://t.me/formagicowbot
 
 RU
-- Kind: Учётная система и OCR-бот, в продакшне
-- Result: Ведёт рейсы, закупки, склад и взаиморасчёты импортёра овощей и фруктов. Накладные заходят фотографией.
+- Kind: Учётная система и OCR-бот, клиентский проект
+- Result: Вела рейсы, закупки, склад и взаиморасчёты импортёра овощей и фруктов. Накладные заходили фотографией.
 - Facts:
   - 9 модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.
-  - Telegram-бот читает фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставляет строки с живым каталогом и ставит в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.
-  - 10-30 накладных в день, пик 60.
+  - Telegram-бот читал фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставлял строки с живым каталогом и ставил в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.
+  - Бот обрабатывал 10-30 накладных в день, пик 60.
   - Собрал один с нуля в Claude Code на Opus 4.8. MVP за 3-4 недели.
-  - Реверс-прокси в Москве держит зарубежный сервер доступным для сотрудников в России.
+  - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
   - Код выкуплен клиентом, поэтому не публикуется. Архитектуру и устройство расскажу по запросу.
 - Stack: same as EN.
 - Links: Демо | OCR-бот
