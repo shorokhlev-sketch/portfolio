@@ -162,12 +162,12 @@ PROJECTS = [
         'result': {'en': 'Sells apartments in a **26** floor residential tower in Batumi and tracks every lead to its source.',
                    'ru': 'Продаёт квартиры в **26**-этажной башне в Батуми и ведёт каждую заявку до источника.'},
         'facts': {'en': [
-            'Apartment picker over **279** units: floor plans, a sales grid and a PDF plan for every unit.',
+            'Apartment picker over **279** units: 3D, floor plans, a sales grid and a PDF plan for every unit.',
             'CRM with agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
             'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.',
             'CRM v0.1 went from schema to production in **2** hours **40** minutes.'],
             'ru': [
-            'Подбор по **279** квартирам: планы этажей, шахматка и PDF-план на каждую квартиру.',
+            'Подбор по **279** квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.',
             'CRM: реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
             'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.',
             'CRM v0.1 прошла путь от схемы до продакшна за **2** часа **40** минут.']},
@@ -177,10 +177,10 @@ PROJECTS = [
             {'href': 'https://github.com/shorokhlev-sketch/apartment-picker', 'label': {'en': 'Site code', 'ru': 'Код сайта'}},
             {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
         ],
-        # no 3D view: the generated tower is not the client's model
-        'desk': [('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
+        # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
+        'desk': [('3d', '3D', '3D'), ('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
                  ('unit-detail', 'Unit', 'Квартира'), ('crm-agent', 'CRM', 'CRM')],
-        'mob': [('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
+        'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {
         'n': '06', 'slug': 'aivisual', 'title': 'AI video production',

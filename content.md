@@ -145,7 +145,7 @@ EN
 - Kind: Sales site and CRM, client project
 - Result: Sells apartments in a 26 floor residential tower in Batumi and tracks every lead to its source.
 - Facts:
-  - Apartment picker over 279 units: floor plans, a sales grid and a PDF plan for every unit.
+  - Apartment picker over 279 units: 3D, floor plans, a sales grid and a PDF plan for every unit.
   - CRM with agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
   - Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.
   - CRM v0.1 went from schema to production in 2 hours 40 minutes.
@@ -156,7 +156,7 @@ RU
 - Kind: Сайт продаж и CRM, клиентский проект
 - Result: Продаёт квартиры в 26-этажной башне в Батуми и ведёт каждую заявку до источника.
 - Facts:
-  - Подбор по 279 квартирам: планы этажей, шахматка и PDF-план на каждую квартиру.
+  - Подбор по 279 квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.
   - CRM: реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
   - Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.
   - CRM v0.1 прошла путь от схемы до продакшна за 2 часа 40 минут.
@@ -230,8 +230,8 @@ Labels of the mode switch in each project scene, in segment order. Desktop = 600
 - RU desktop: Сцены, Субтитры, Клипы, Обрезка | RU phone: Сцены, Субтитры, Клипы
 
 05 26 MAISI
-- EN desktop: Floor plans, Grid, Unit, CRM | EN phone: Floor plans, Unit
-- RU desktop: Планы этажей, Шахматка, Квартира, CRM | RU phone: Планы этажей, Квартира
+- EN desktop: 3D, Floor plans, Grid, Unit, CRM | EN phone: 3D, Floor plans, Unit
+- RU desktop: 3D, Планы этажей, Шахматка, Квартира, CRM | RU phone: 3D, Планы этажей, Квартира
 
 06 AI video production
 - EN desktop: Copper, Stone, Porcelain, Technics, Storyboard | EN phone: Copper, Stone, Porcelain

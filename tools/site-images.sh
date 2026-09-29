@@ -46,7 +46,8 @@ m80 trade settlements "$S/trade/mobile-04-settlements-suppliers.png"
 m80 trade sales "$S/trade/mobile-02-sales.png"
 
 # picker captures: the picker's own view switch (#segmented) is hidden by capture-only CSS, so the scene has one mode switch
-# no 3D view: content.md dropped it (the generated tower is not the client's model)
+# 3D view: AI tower frames with the PLACEHOLDER lattice, unit polygons, frame label and cookie bar hidden (scratchpad pw/maisi3d.mjs)
+d maisi 3d "$S/maisi/picker-3d-desktop.png"
 d maisi floorplan-status "$S/maisi/picker-floorplan-status-desktop.png"
 # grid: the facade preview in the rail (#railPreview, the generated tower render) is hidden too (scratchpad pw/r1-maisi.mjs grid)
 d maisi grid "$S/maisi/picker-2d-grid-desktop.png"
@@ -54,6 +55,7 @@ d maisi unit-detail "$S/maisi/unit-detail-desktop.png"
 # phone picker captures: the picker's bottom tab bar (#tabbar, its own view switch) and the frame chip are hidden by capture-only CSS
 # (scratchpad pw/maisi-noswitch.mjs, which also answers /crm/api/track locally)
 # floor plans on the phone: status toggle on and unit #1009 tapped, its sheet open (scratchpad pw/r1-maisi.mjs floor-m)
+m maisi 3d "$S/maisi/picker-3d-mobile.png"
 m maisi floorplan "$S/maisi/picker-floorplan-mobile.png"
 m80 maisi unit-detail "$S/maisi/unit-detail-mobile.png"
 # no CRM frame on phones: the phone set of p-05 is Floor plans, Unit (content.md "Scene modes")
