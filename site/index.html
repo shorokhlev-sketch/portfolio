@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lev Skorokhodov | AI engineer</title>
-<meta name="description" content="I build LLM agents and the harness around Claude and Codex, and ship them to production.">
+<meta name="description" content="I build AI systems that take manual work off a business: invoices read from photos, stock and settlements, sales sites with CRM, shops in Telegram.">
 <meta name="theme-color" content="#161616">
 <link rel="canonical" href="https://lab.prfo.design/portfolio/">
 <link rel="alternate" hreflang="en" href="https://lab.prfo.design/portfolio/?lang=en">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lab.prfo.design/portfolio/">
 <meta property="og:title" content="Lev Skorokhodov | AI engineer">
-<meta property="og:description" content="I build LLM agents and the harness around Claude and Codex, and ship them to production.">
+<meta property="og:description" content="I build AI systems that take manual work off a business: invoices read from photos, stock and settlements, sales sites with CRM, shops in Telegram.">
 <meta property="og:image" content="https://lab.prfo.design/portfolio/assets/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
 <link rel="preload" as="image" href="assets/img/floorplans/floor-10-vector-1200.webp" imagesrcset="assets/img/floorplans/floor-10-vector-1200.webp 1200w, assets/img/floorplans/floor-10-vector-2400.webp 2400w" imagesizes="(min-width: 1200px) calc(100vw - 522px), 100vw" media="(min-width: 600px)" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/page.css">
-<script>(function(){var d=document.documentElement,l=null;try{l=new URLSearchParams(location.search).get('lang');if(l!=='ru'&&l!=='en'){l=localStorage.getItem('lang')}}catch(x){}if(l!=='ru'){l='en'}d.lang=l;d.classList.add('js');if(l==='ru'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},2000)}})();</script>
+<script>(function(){var d=document.documentElement,l=null;try{l=new URLSearchParams(location.search).get('lang');if(l!=='ru'&&l!=='en'){l=localStorage.getItem('lang')}}catch(x){}if(l!=='ru'&&l!=='en'){l=/^ru\b/i.test(navigator.language||'')?'ru':'en'}d.lang=l;d.classList.add('js');if(l==='ru'){d.classList.add('i18n-wait');setTimeout(function(){d.classList.remove('i18n-wait')},2000)}})();</script>
 <script src="assets/js/i18n.js" defer></script>
 <script src="assets/js/page.js" defer></script>
 </head>
@@ -50,12 +50,12 @@
     <div class="container">
       <p class="eyebrow" data-i18n="role">AI engineer</p>
       <h1 class="display" data-i18n="name">Lev Skorokhodov</h1>
-      <p class="lead" data-i18n="line">I build LLM agents and the harness around Claude and Codex, and ship them to production.</p>
+      <p class="lead" data-i18n="line">I build AI systems that take manual work off a business: invoices read from photos, stock and settlements, sales sites with CRM, shops in Telegram.</p>
       <div class="sep" aria-hidden="true"></div>
       <ul class="do">
-          <li><strong data-i18n="do1.h">Agents and harness.</strong><span data-i18n="do1.t">Parallel Claude and Codex subagents, instruction files per task type, acceptance by diff, tests and render checks.</span></li>
-          <li><strong data-i18n="do2.h">Prototype to production.</strong><span data-i18n="do2.t">VPS, nginx, systemd, CI, snapshots before every deploy. <b>7</b> services live on one server.</span></li>
-          <li><strong data-i18n="do3.h">Web and visual.</strong><span data-i18n="do3.t">Interfaces, design systems, AI images and video.</span></li>
+          <li><strong data-i18n="do1.h">Documents to data.</strong><span data-i18n="do1.t">A bot reads photos of invoices and forms, matches every line to your catalog and sends unclear ones to a person.</span></li>
+          <li><strong data-i18n="do2.h">Accounting and sales.</strong><span data-i18n="do2.t">Stock, settlements and leads in one system. Every lead is tracked to its source.</span></li>
+          <li><strong data-i18n="do3.h">Launch and upkeep.</strong><span data-i18n="do3.t">Server, domain, a backup before every update. <b>7</b> services run on one server today.</span></li>
       </ul>
     </div>
   </section>
@@ -63,7 +63,7 @@
     <section class="project" data-theme="app" id="p-01" aria-labelledby="p-01-title" data-shape="landscape" data-mpos="center">
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p01.kind">Agent pipeline, client project</span><span class="badge badge--id">01</span></div>
-        <h2 class="rail__title" id="p-01-title">Floor plan pipeline</h2>
+        <h2 class="rail__title" id="p-01-title" data-i18n="p01.title">Floor plan pipeline</h2>
         <p class="rail__result" data-i18n="p01.result">Turns a <b>114</b> page architectural PDF into clean vector plans for <b>279</b> apartments on <b>25</b> floors.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 797">
@@ -102,35 +102,35 @@
     <section class="project" data-theme="app" id="p-02" aria-labelledby="p-02-title" data-shape="landscape">
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p02.kind">Accounting system and OCR bot, client project</span><span class="badge badge--id">02</span></div>
-        <h2 class="rail__title" id="p-02-title">Trade System</h2>
+        <h2 class="rail__title" id="p-02-title" data-i18n="p02.title">Trade System</h2>
         <p class="rail__result" data-i18n="p02.result">Ran trips, purchases, stock and settlements for a produce import business. Invoices went in by photo.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 750">
         <div class="scene__bar">
-          <button type="button" class="fs" aria-haspopup="dialog" aria-label="Trade System: Sales"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button>
-          <div class="seg" role="radiogroup" aria-label="Trade System"><button type="button" class="seg__btn" role="radio" aria-checked="true" tabindex="0" data-i="0" data-i18n="p02.mode.d1" data-label="Sales">Sales</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="1" data-i18n="p02.mode.d2" data-label="AI inbox">AI inbox</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="2" data-i18n="p02.mode.d3" data-label="Trip">Trip</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="3" data-i18n="p02.mode.d4" data-label="Price list">Price list</button></div>
+          <button type="button" class="fs" aria-haspopup="dialog" aria-label="Trade System: AI inbox"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button>
+          <div class="seg" role="radiogroup" aria-label="Trade System"><button type="button" class="seg__btn" role="radio" aria-checked="true" tabindex="0" data-i="0" data-i18n="p02.mode.d1" data-label="AI inbox">AI inbox</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="1" data-i18n="p02.mode.d2" data-label="Sales">Sales</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="2" data-i18n="p02.mode.d3" data-label="Trip">Trip</button><button type="button" class="seg__btn" role="radio" aria-checked="false" tabindex="-1" data-i="3" data-i18n="p02.mode.d4" data-label="Price list">Price list</button></div>
         </div>
         <div class="scene__box">
-          <button type="button" class="scene__open" aria-haspopup="dialog" aria-label="Trade System: Sales">
+          <button type="button" class="scene__open" aria-haspopup="dialog" aria-label="Trade System: AI inbox">
           <span class="stack stack--d" data-set="d">
-          <img class="shot is-on" src="assets/img/trade/sales-1200.webp" srcset="assets/img/trade/sales-1200.webp 1200w, assets/img/trade/sales-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: Sales" data-i18n-alt="p02.alt.d1" data-mode="p02.mode.d1" data-big="assets/img/trade/sales-2400.webp" loading="lazy" decoding="async">
-          <img class="shot" data-src="assets/img/trade/ai-inbox-1200.webp" data-srcset="assets/img/trade/ai-inbox-1200.webp 1200w, assets/img/trade/ai-inbox-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: AI inbox" data-i18n-alt="p02.alt.d2" data-mode="p02.mode.d2" data-big="assets/img/trade/ai-inbox-2400.webp" decoding="async">
+          <img class="shot is-on" src="assets/img/trade/ai-inbox-1200.webp" srcset="assets/img/trade/ai-inbox-1200.webp 1200w, assets/img/trade/ai-inbox-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: AI inbox" data-i18n-alt="p02.alt.d1" data-mode="p02.mode.d1" data-big="assets/img/trade/ai-inbox-2400.webp" loading="lazy" decoding="async">
+          <img class="shot" data-src="assets/img/trade/sales-1200.webp" data-srcset="assets/img/trade/sales-1200.webp 1200w, assets/img/trade/sales-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: Sales" data-i18n-alt="p02.alt.d2" data-mode="p02.mode.d2" data-big="assets/img/trade/sales-2400.webp" decoding="async">
           <img class="shot" data-src="assets/img/trade/trip-1200.webp" data-srcset="assets/img/trade/trip-1200.webp 1200w, assets/img/trade/trip-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: Trip" data-i18n-alt="p02.alt.d3" data-mode="p02.mode.d3" data-big="assets/img/trade/trip-2400.webp" decoding="async">
           <img class="shot" data-src="assets/img/trade/pricelist-1200.webp" data-srcset="assets/img/trade/pricelist-1200.webp 1200w, assets/img/trade/pricelist-2400.webp 2400w" sizes="(min-width: 1200px) calc(100vw - 522px), 100vw" width="2400" height="1500" alt="Trade System: Price list" data-i18n-alt="p02.alt.d4" data-mode="p02.mode.d4" data-big="assets/img/trade/pricelist-2400.webp" decoding="async">
           </span>
           </button>
         </div>
-        <div class="capsule"><button type="button" class="capsule__btn" data-step="-1" aria-label="Previous" data-i18n-aria="a11y.prev"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button><span class="capsule__label" aria-live="polite">Sales</span><button type="button" class="capsule__btn" data-step="1" aria-label="Next" data-i18n-aria="a11y.next"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></button></div>
+        <div class="capsule"><button type="button" class="capsule__btn" data-step="-1" aria-label="Previous" data-i18n-aria="a11y.prev"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button><span class="capsule__label" aria-live="polite">AI inbox</span><button type="button" class="capsule__btn" data-step="1" aria-label="Next" data-i18n-aria="a11y.next"><svg class="ico" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></button></div>
       </div>
       <div class="pbody">
         <ul class="facts">
-          <li data-i18n="p02.fact1"><b>9</b> modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.</li>
-          <li data-i18n="p02.fact2">Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.</li>
-          <li data-i18n="p02.fact3">The bot handled <b>10 to 30</b> invoices a day, peak <b>60</b>.</li>
-          <li data-i18n="p02.fact4">Built solo with Claude Code on Opus 4.8. MVP in <b>5</b> days from scratch.</li>
-          <li data-i18n="p02.fact5">Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.</li>
-          <li data-i18n="p02.fact6">The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.</li>
-          <li data-i18n="p02.fact7"><b>0</b> wrong catalog matches on <b>124</b> lines of <b>20</b> synthetic invoices: an unreadable name goes to review instead of a guess. <b>$0.003 to $0.026</b> per invoice across 3 models.</li>
+          <li data-i18n="p02.fact1">Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.</li>
+          <li data-i18n="p02.fact2">The bot handled <b>10 to 30</b> invoices a day, peak <b>60</b>.</li>
+          <li data-i18n="p02.fact3">The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.</li>
+          <li data-i18n="p02.fact4"><b>0</b> wrong catalog matches on <b>124</b> lines of <b>20</b> synthetic invoices: an unreadable name goes to review instead of a guess. <b>$0.003 to $0.026</b> per invoice across 3 models.</li>
+          <li data-i18n="p02.fact5"><b>9</b> modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.</li>
+          <li data-i18n="p02.fact6">Built solo. MVP in <b>5</b> days from scratch.</li>
+          <li data-i18n="p02.fact7">Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.</li>
         </ul>
         <p class="meta meta--solo">React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.</p>
         <div class="links">
@@ -143,7 +143,7 @@
     <section class="project" data-theme="app" id="p-03" aria-labelledby="p-03-title" data-shape="landscape">
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p03.kind">Telegram Mini App and bot, client project in progress</span><span class="badge badge--id">03</span></div>
-        <h2 class="rail__title" id="p-03-title">Telegram store</h2>
+        <h2 class="rail__title" id="p-03-title" data-i18n="p03.title">Telegram store</h2>
         <p class="rail__result" data-i18n="p03.result">A shop for used Apple devices inside Telegram. The seller fills in one bot wizard and the lot goes to the channel, the Mini App and the website at once. A sale removes it everywhere.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 750">
@@ -167,8 +167,8 @@
         <ul class="facts">
           <li data-i18n="p03.fact1">One React app runs as a Telegram Mini App and as a website. Mini App requests are checked by HMAC of Telegram initData.</li>
           <li data-i18n="p03.fact2">Bot wizard: photos, nested model picker, condition, price, then a 1:1 preview of the channel post.</li>
-          <li data-i18n="p03.fact3"><b>340</b> tests run offline in <b>11</b> seconds. A guard test fails on any emoji in bot texts.</li>
-          <li data-i18n="p03.fact4">Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging. <b>51</b> commits in <b>5</b> working days.</li>
+          <li data-i18n="p03.fact3"><b>340</b> tests run offline in under <b>20</b> seconds.</li>
+          <li data-i18n="p03.fact4">Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging.</li>
         </ul>
         <p class="meta meta--solo">Python 3.12, FastAPI, aiogram 3, SQLAlchemy 2, SQLite, Alembic, React 18, Vite, TypeScript, Tailwind.</p>
         <div class="links">
@@ -179,7 +179,7 @@
     <section class="project" data-theme="app" id="p-04" aria-labelledby="p-04-title" data-shape="landscape">
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p04.kind">LLM video pipeline</span><span class="badge badge--id">04</span></div>
-        <h2 class="rail__title" id="p-04-title">Content Factory</h2>
+        <h2 class="rail__title" id="p-04-title" data-i18n="p04.title">Content Factory</h2>
         <p class="rail__result" data-i18n="p04.result">Cuts a <b>23</b> minute episode into <b>5 to 7</b> vertical clips with burned subtitles for about <b>$0.27</b> in API cost.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 716">
@@ -215,9 +215,9 @@
     </section>
     <section class="project" data-theme="app" id="p-05" aria-labelledby="p-05-title" data-shape="landscape">
       <div class="phead">
-        <div class="rail__head"><span class="badge badge--type" data-i18n="p05.kind">Sales site and CRM, client project</span><span class="badge badge--id">05</span></div>
-        <h2 class="rail__title" id="p-05-title">26 MAISI</h2>
-        <p class="rail__result" data-i18n="p05.result">Sells apartments in a <b>26</b> floor residential tower in Batumi and tracks every lead to its source.</p>
+        <div class="rail__head"><span class="badge badge--type" data-i18n="p05.kind">Sales site and CRM, client project in progress</span><span class="badge badge--id">05</span></div>
+        <h2 class="rail__title" id="p-05-title" data-i18n="p05.title">26 MAISI</h2>
+        <p class="rail__result" data-i18n="p05.result">Apartment picker and lead tracking for a <b>26</b> floor residential tower in Batumi, before sales start.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 750">
         <div class="scene__bar">
@@ -242,7 +242,6 @@
           <li data-i18n="p05.fact1">Apartment picker over <b>279</b> units: 3D, floor plans, a sales grid and a PDF plan for every unit.</li>
           <li data-i18n="p05.fact2">CRM with agent referral links, <b>90</b> day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.</li>
           <li data-i18n="p05.fact3">Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.</li>
-          <li data-i18n="p05.fact4">CRM v0.1 went from schema to production in <b>2</b> hours <b>40</b> minutes.</li>
         </ul>
         <p class="meta meta--solo">JavaScript, Node.js, Fastify, SQLite, nginx.</p>
         <div class="links">
@@ -255,7 +254,7 @@
     <section class="project" data-theme="app" id="p-06" aria-labelledby="p-06-title" data-shape="landscape" data-bleed>
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p06.kind">AI images and video on Higgsfield</span><span class="badge badge--id">06</span></div>
-        <h2 class="rail__title" id="p-06-title">AI video production</h2>
+        <h2 class="rail__title" id="p-06-title" data-i18n="p06.title">AI video production</h2>
         <p class="rail__result" data-i18n="p06.result">Fashion and product films without the plastic AI look. Claude generates frames and clips, and I approve every frame on a live storyboard before any video is made.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 750">
@@ -292,7 +291,7 @@
     <section class="project" data-theme="app" id="p-07" aria-labelledby="p-07-title" data-shape="landscape">
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="p07.kind">Personal project, university course paper</span><span class="badge badge--id">07</span></div>
-        <h2 class="rail__title" id="p-07-title">matscout</h2>
+        <h2 class="rail__title" id="p-07-title" data-i18n="p07.title">matscout</h2>
         <p class="rail__result" data-i18n="p07.result">MCP server and research agent over materials databases, built for a course paper in materials science.</p>
       </div>
       <div class="scene" style="--ar: 1200 / 750">

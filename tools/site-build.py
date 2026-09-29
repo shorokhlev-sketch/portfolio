@@ -21,24 +21,24 @@ def plain(s):
 SITE = {
     'en': {
         'name': 'Lev Skorokhodov', 'role': 'AI engineer',
-        'line': 'I build LLM agents and the harness around Claude and Codex, and ship them to production.',
+        'line': 'I build AI systems that take manual work off a business: invoices read from photos, stock and settlements, sales sites with CRM, shops in Telegram.',
         'cta': 'Telegram',
         'do': [
-            ('Agents and harness.', 'Parallel Claude and Codex subagents, instruction files per task type, acceptance by diff, tests and render checks.'),
-            ('Prototype to production.', 'VPS, nginx, systemd, CI, snapshots before every deploy. **7** services live on one server.'),
-            ('Web and visual.', 'Interfaces, design systems, AI images and video.'),
+            ('Documents to data.', 'A bot reads photos of invoices and forms, matches every line to your catalog and sends unclear ones to a person.'),
+            ('Accounting and sales.', 'Stock, settlements and leads in one system. Every lead is tracked to its source.'),
+            ('Launch and upkeep.', 'Server, domain, a backup before every update. **7** services run on one server today.'),
         ],
         'tg': 'Telegram @prfowax', 'gh': 'GitHub',
         'close': 'Close', 'prev': 'Previous', 'next': 'Next',
     },
     'ru': {
         'name': 'Лев Скороходов', 'role': 'AI-инженер',
-        'line': 'Строю LLM-агентов и харнесс вокруг Claude и Codex и довожу их до продакшна.',
+        'line': 'Делаю ИИ-системы, которые снимают с бизнеса ручную работу: читают накладные по фото, ведут склад и взаиморасчёты, собирают заявки в CRM, продают через Telegram.',
         'cta': 'Telegram',
         'do': [
-            ('Агенты и харнесс.', 'Параллельные сабагенты Claude и Codex, файл-инструкция на каждый тип задачи, приёмка по диффу, тестам и проверке рендера.'),
-            ('От прототипа до продакшна.', 'VPS, nginx, systemd, CI, снапшот перед каждым деплоем. **7** сервисов живут на одном сервере.'),
-            ('Веб и визуал.', 'Интерфейсы, дизайн-системы, AI-изображения и видео.'),
+            ('Документы в данные.', 'Бот читает фото накладных и бланков, сопоставляет каждую строку с вашим каталогом, а неясные отдаёт человеку.'),
+            ('Учёт и продажи.', 'Склад, взаиморасчёты и заявки в одной системе. У каждой заявки виден источник.'),
+            ('Запуск и сопровождение.', 'Сервер, домен, бэкап перед каждым обновлением. **7** сервисов сейчас работают на одном сервере.'),
         ],
         'tg': 'Telegram @prfowax', 'gh': 'GitHub',
         'close': 'Закрыть', 'prev': 'Назад', 'next': 'Далее',
@@ -48,7 +48,7 @@ STACK_ALL = 'Claude Code, Codex, Claude and OpenAI APIs, MCP, Python, TypeScript
 
 PROJECTS = [
     {
-        'n': '01', 'slug': 'floorplans', 'title': 'Floor plan pipeline',
+        'n': '01', 'slug': 'floorplans', 'title': 'Floor plan pipeline', 'title_ru': 'Конвейер планировок',
         'kind': {'en': 'Agent pipeline, client project', 'ru': 'Агентный конвейер, клиентский проект'},
         'result': {'en': 'Turns a **114** page architectural PDF into clean vector plans for **279** apartments on **25** floors.',
                    'ru': 'Превращает архитектурный PDF на **114** страниц в чистые векторные планы **279** квартир на **25** этажах.'},
@@ -84,44 +84,47 @@ PROJECTS = [
         'result': {'en': 'Ran trips, purchases, stock and settlements for a produce import business. Invoices went in by photo.',
                    'ru': 'Вела рейсы, закупки, склад и взаиморасчёты импортёра овощей и фруктов. Накладные заходили фотографией.'},
         'facts': {'en': [
-            '**9** modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.',
             'Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.',
             'The bot handled **10 to 30** invoices a day, peak **60**.',
-            'Built solo with Claude Code on Opus 4.8. MVP in **5** days from scratch.',
-            'Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.',
-            'The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.', '**0** wrong catalog matches on **124** lines of **20** synthetic invoices: an unreadable name goes to review instead of a guess. **$0.003 to $0.026** per invoice across 3 models.'],
+            'The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.',
+            '**0** wrong catalog matches on **124** lines of **20** synthetic invoices: an unreadable name goes to review instead of a guess. **$0.003 to $0.026** per invoice across 3 models.',
+            '**9** modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.',
+            'Built solo. MVP in **5** days from scratch.',
+            'Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.'],
             'ru': [
-            '**9** модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.',
             'Telegram-бот читал фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставлял строки с живым каталогом и ставил в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.',
             'Бот обрабатывал **10-30** накладных в день, пик **60**.',
-            'Собрал один в Claude Code на Opus 4.8. MVP за **5** дней с нуля.',
-            'Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.',
-            'Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.', '**0** ошибочных сопоставлений с каталогом на **124** строках **20** синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. **$0.003-0.026** за накладную на 3 моделях.']},
+            'Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.',
+            '**0** ошибочных сопоставлений с каталогом на **124** строках **20** синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. **$0.003-0.026** за накладную на 3 моделях.',
+            '**9** модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.',
+            'Собрал один. MVP за **5** дней с нуля.',
+            'Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.']},
         'stack': 'React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.',
         'links': [
             {'href': 'https://lab.prfo.design/trade/', 'label': {'en': 'Demo', 'ru': 'Демо'}},
             {'href': 'https://t.me/formagicowbot', 'label': {'en': 'OCR bot', 'ru': 'OCR-бот'}},
             {'href': 'https://github.com/shorokhlev-sketch/invoice-ocr', 'label': {'en': 'OCR code', 'ru': 'Код OCR'}},
         ],
-        'desk': [('sales', 'Sales', 'Продажи'), ('ai-inbox', 'AI inbox', 'AI-инбокс'),
+        # AI inbox first: the raw name to catalog match is the proof a business buyer looks for
+        'desk': [('ai-inbox', 'AI inbox', 'AI-инбокс'), ('sales', 'Sales', 'Продажи'),
                  ('trip', 'Trip', 'Рейс'), ('pricelist', 'Price list', 'Прайс-лист')],
         'mob': [('settlements', 'Settlements', 'Взаиморасчёты'), ('sales', 'Sales', 'Продажи')],
     },
     {
-        'n': '03', 'slug': 'tgstore', 'title': 'Telegram store',
+        'n': '03', 'slug': 'tgstore', 'title': 'Telegram store', 'title_ru': 'Магазин в Telegram',
         'kind': {'en': 'Telegram Mini App and bot, client project in progress', 'ru': 'Telegram Mini App и бот, клиентский проект в работе'},
         'result': {'en': 'A shop for used Apple devices inside Telegram. The seller fills in one bot wizard and the lot goes to the channel, the Mini App and the website at once. A sale removes it everywhere.',
                    'ru': 'Магазин б/у техники Apple внутри Telegram. Продавец заполняет один мастер в боте, и лот сразу появляется в канале, в Mini App и на сайте. После продажи лот исчезает везде.'},
         'facts': {'en': [
             'One React app runs as a Telegram Mini App and as a website. Mini App requests are checked by HMAC of Telegram initData.',
             'Bot wizard: photos, nested model picker, condition, price, then a 1:1 preview of the channel post.',
-            '**340** tests run offline in **11** seconds. A guard test fails on any emoji in bot texts.',
-            'Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging. **51** commits in **5** working days.'],
+            '**340** tests run offline in under **20** seconds.',
+            'Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging.'],
             'ru': [
             'Одно React-приложение работает как Telegram Mini App и как сайт. Запросы Mini App проверяются по HMAC от initData Telegram.',
             'Мастер в боте: фото, вложенный выбор модели, состояние, цена и превью поста в канале один в один.',
-            '**340** тестов проходят офлайн за **11** секунд. Тест-сторож падает на любом эмодзи в текстах бота.',
-            'Собран агентным циклом: сабагенты Sonnet пишут рутину, Opus сложную логику, приёмка по диффу, pytest и curl на стейджинге. **51** коммит за **5** рабочих дней.']},
+            '**340** тестов проходят офлайн меньше чем за **20** секунд.',
+            'Собран агентным циклом: сабагенты Sonnet пишут рутину, Opus сложную логику, приёмка по диффу, pytest и curl на стейджинге.']},
         'stack': 'Python 3.12, FastAPI, aiogram 3, SQLAlchemy 2, SQLite, Alembic, React 18, Vite, TypeScript, Tailwind.',
         'links': [
             # no live storefront link: its page title carries the shop name that the captures blur
@@ -159,19 +162,17 @@ PROJECTS = [
     },
     {
         'n': '05', 'slug': 'maisi', 'title': '26 MAISI',
-        'kind': {'en': 'Sales site and CRM, client project', 'ru': 'Сайт продаж и CRM, клиентский проект'},
-        'result': {'en': 'Sells apartments in a **26** floor residential tower in Batumi and tracks every lead to its source.',
-                   'ru': 'Продаёт квартиры в **26**-этажной башне в Батуми и ведёт каждую заявку до источника.'},
+        'kind': {'en': 'Sales site and CRM, client project in progress', 'ru': 'Сайт продаж и CRM, клиентский проект в работе'},
+        'result': {'en': 'Apartment picker and lead tracking for a **26** floor residential tower in Batumi, before sales start.',
+                   'ru': 'Подбор квартир и учёт заявок для **26**-этажной башни в Батуми, до старта продаж.'},
         'facts': {'en': [
             'Apartment picker over **279** units: 3D, floor plans, a sales grid and a PDF plan for every unit.',
             'CRM with agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
-            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.',
-            'CRM v0.1 went from schema to production in **2** hours **40** minutes.'],
+            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.'],
             'ru': [
             'Подбор по **279** квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.',
             'CRM: реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
-            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.',
-            'CRM v0.1 прошла путь от схемы до продакшна за **2** часа **40** минут.']},
+            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.']},
         'stack': 'JavaScript, Node.js, Fastify, SQLite, nginx.',
         'links': [
             {'href': 'https://lab.prfo.design/maisi/', 'label': {'en': 'Site', 'ru': 'Сайт'}},
@@ -184,7 +185,7 @@ PROJECTS = [
         'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {
-        'n': '06', 'slug': 'aivisual', 'title': 'AI video production',
+        'n': '06', 'slug': 'aivisual', 'title': 'AI video production', 'title_ru': 'AI-видеопродакшн',
         'kind': {'en': 'AI images and video on Higgsfield', 'ru': 'AI-изображения и видео на Higgsfield'},
         'result': {'en': 'Fashion and product films without the plastic AI look. Claude generates frames and clips, and I approve every frame on a live storyboard before any video is made.',
                    'ru': 'Фэшн- и продуктовые ролики без пластикового AI-вида. Claude генерирует кадры и клипы, а я принимаю каждый кадр на живой раскадровке до генерации видео.'},
@@ -249,6 +250,7 @@ for L in ('en', 'ru'):
     d['a11y.close'] = s['close']; d['a11y.prev'] = s['prev']; d['a11y.next'] = s['next']
     for p in PROJECTS:
         k = 'p' + p['n']
+        d[k + '.title'] = p.get('title_ru', p['title']) if L == 'ru' else p['title']
         d[k + '.kind'] = p['kind'][L]
         d[k + '.result'] = md(p['result'][L])
         for i, f in enumerate(p['facts'][L], 1):
@@ -369,7 +371,7 @@ def project_html(p, idx):
     <section class="project" data-theme="app" id="p-{n}" aria-labelledby="p-{n}-title" data-shape="{shape}"{extra}>
       <div class="phead">
         <div class="rail__head"><span class="badge badge--type" data-i18n="{k}.kind">{e(en[k + ".kind"])}</span><span class="badge badge--id">{n}</span></div>
-        <h2 class="rail__title" id="p-{n}-title">{e(p["title"])}</h2>
+        <h2 class="rail__title" id="p-{n}-title" data-i18n="{k}.title">{e(p["title"])}</h2>
         <p class="rail__result" data-i18n="{k}.result">{en[k + ".result"]}</p>
       </div>
       <div class="scene" style="--ar: {aw} / {ah}">
@@ -403,7 +405,8 @@ do_items = '\n          '.join(
 projects_html = ''.join(project_html(p, i) for i, p in enumerate(PROJECTS))
 
 HEAD_SCRIPT = ("(function(){var d=document.documentElement,l=null;try{l=new URLSearchParams(location.search).get('lang');"
-               "if(l!=='ru'&&l!=='en'){l=localStorage.getItem('lang')}}catch(x){}if(l!=='ru'){l='en'}"
+               "if(l!=='ru'&&l!=='en'){l=localStorage.getItem('lang')}}catch(x){}"
+               "if(l!=='ru'&&l!=='en'){l=/^ru\\b/i.test(navigator.language||'')?'ru':'en'}"
                "d.lang=l;d.classList.add('js');if(l==='ru'){d.classList.add('i18n-wait');"
                "setTimeout(function(){d.classList.remove('i18n-wait')},2000)}})();")
 

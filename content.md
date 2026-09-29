@@ -3,7 +3,9 @@
 Every number here is verified against code, data or Lev's own statement. Builders use this text as is.
 Do not add claims, adjectives or slogans. Style: short, active voice, numbers, no dashes (neither em nor en dash, not even in titles), no emoji, no explainer notes.
 
-Language: English is the default. Russian is a full alternative set, switched by an EN / RU control; the page remembers the choice (?lang=ru also works).
+Language: Russian for a browser set to Russian, English otherwise. Russian is a full alternative set, switched by an EN / RU control; the page remembers the choice (?lang=ru and ?lang=en also work).
+
+Audience: business owners who want manual work automated (Lev, 2026-09-30). Engineering detail stays in the facts, not in the header.
 
 ---
 
@@ -12,30 +14,32 @@ Language: English is the default. Russian is a full alternative set, switched by
 EN
 - Name: Lev Skorokhodov
 - Role: AI engineer
-- Line: I build LLM agents and the harness around Claude and Codex, and ship them to production.
+- Line: I build AI systems that take manual work off a business: invoices read from photos, stock and settlements, sales sites with CRM, shops in Telegram.
 - Contact action: Telegram
 
 RU
 - Name: Лев Скороходов
 - Role: AI-инженер
-- Line: Строю LLM-агентов и харнесс вокруг Claude и Codex и довожу их до продакшна.
+- Line: Делаю ИИ-системы, которые снимают с бизнеса ручную работу: читают накладные по фото, ведут склад и взаиморасчёты, собирают заявки в CRM, продают через Telegram.
 - Contact action: Telegram
 
 ## What I do (3 items)
 
 EN
-1. Agents and harness. Parallel Claude and Codex subagents, instruction files per task type, acceptance by diff, tests and render checks.
-2. Prototype to production. VPS, nginx, systemd, CI, snapshots before every deploy. 7 services live on one server.
-3. Web and visual. Interfaces, design systems, AI images and video.
+1. Documents to data. A bot reads photos of invoices and forms, matches every line to your catalog and sends unclear ones to a person.
+2. Accounting and sales. Stock, settlements and leads in one system. Every lead is tracked to its source.
+3. Launch and upkeep. Server, domain, a backup before every update. 7 services run on one server today.
 
 RU
-1. Агенты и харнесс. Параллельные сабагенты Claude и Codex, файл-инструкция на каждый тип задачи, приёмка по диффу, тестам и проверке рендера.
-2. От прототипа до продакшна. VPS, nginx, systemd, CI, снапшот перед каждым деплоем. 7 сервисов живут на одном сервере.
-3. Веб и визуал. Интерфейсы, дизайн-системы, AI-изображения и видео.
+1. Документы в данные. Бот читает фото накладных и бланков, сопоставляет каждую строку с вашим каталогом, а неясные отдаёт человеку.
+2. Учёт и продажи. Склад, взаиморасчёты и заявки в одной системе. У каждой заявки виден источник.
+3. Запуск и сопровождение. Сервер, домен, бэкап перед каждым обновлением. 7 сервисов сейчас работают на одном сервере.
 
 ---
 
 ## Projects (order is fixed)
+
+RU titles: a project without a RU Title line keeps its EN title in Russian.
 
 ### 01 Floor plan pipeline
 
@@ -52,6 +56,7 @@ EN
 - Links: Floors live https://lab.prfo.design/maisi/select.html#/floors | Code https://github.com/shorokhlev-sketch/floorplan-pipeline
 
 RU
+- Title: Конвейер планировок
 - Kind: Агентный конвейер, клиентский проект
 - Result: Превращает архитектурный PDF на 114 страниц в чистые векторные планы 279 квартир на 25 этажах.
 - Facts:
@@ -69,13 +74,13 @@ EN
 - Kind: Accounting system and OCR bot, client project
 - Result: Ran trips, purchases, stock and settlements for a produce import business. Invoices went in by photo.
 - Facts:
-  - 9 modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.
   - Telegram bot read photos of handwritten invoices with Claude Sonnet on AWS Bedrock, matched lines to the live catalog and queued them for approval. The public demo bot runs the same flow on GPT-4o Vision.
   - The bot handled 10 to 30 invoices a day, peak 60.
-  - Built solo with Claude Code on Opus 4.8. MVP in 5 days from scratch.
-  - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
   - The client bought out the code. The AI part is rewritten from scratch as a public repo: extraction, catalog matching, approval queue, eval on synthetic invoices.
   - 0 wrong catalog matches on 124 lines of 20 synthetic invoices: an unreadable name goes to review instead of a guess. $0.003 to $0.026 per invoice across 3 models.
+  - 9 modules: sales, AI inbox, purchases, trips, FIFO warehouse, deliveries, price list, settlements, catalogs.
+  - Built solo. MVP in 5 days from scratch.
+  - Reverse proxy in Moscow kept the offshore server reachable for staff in Russia.
 - Stack: React 18, Vite, Node.js, Express, PostgreSQL, Claude on AWS Bedrock, OpenAI API (demo), Telegram Bot API.
 - Links: Demo https://lab.prfo.design/trade/ | OCR bot https://t.me/formagicowbot | OCR code https://github.com/shorokhlev-sketch/invoice-ocr
 
@@ -83,13 +88,13 @@ RU
 - Kind: Учётная система и OCR-бот, клиентский проект
 - Result: Вела рейсы, закупки, склад и взаиморасчёты импортёра овощей и фруктов. Накладные заходили фотографией.
 - Facts:
-  - 9 модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.
   - Telegram-бот читал фото рукописных накладных через Claude Sonnet на AWS Bedrock, сопоставлял строки с живым каталогом и ставил в очередь на подтверждение. Публичный демо-бот повторяет этот путь на GPT-4o Vision.
   - Бот обрабатывал 10-30 накладных в день, пик 60.
-  - Собрал один в Claude Code на Opus 4.8. MVP за 5 дней с нуля.
-  - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
   - Код выкуплен клиентом. AI-часть переписана с нуля в публичный репозиторий: распознавание, сопоставление с каталогом, очередь подтверждения, eval на синтетических накладных.
   - 0 ошибочных сопоставлений с каталогом на 124 строках 20 синтетических накладных: нечитаемое название уходит на проверку, а не угадывается. $0.003-0.026 за накладную на 3 моделях.
+  - 9 модулей: продажи, AI-инбокс, закупки, рейсы, склад по FIFO, доставки, прайс-лист, взаиморасчёты, справочники.
+  - Собрал один. MVP за 5 дней с нуля.
+  - Реверс-прокси в Москве держал зарубежный сервер доступным для сотрудников в России.
 - Stack: same as EN.
 - Links: Демо | OCR-бот | Код OCR
 
@@ -101,19 +106,20 @@ EN
 - Facts:
   - One React app runs as a Telegram Mini App and as a website. Mini App requests are checked by HMAC of Telegram initData.
   - Bot wizard: photos, nested model picker, condition, price, then a 1:1 preview of the channel post.
-  - 340 tests run offline in 11 seconds. A guard test fails on any emoji in bot texts.
-  - Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging. 51 commits in 5 working days.
+  - 340 tests run offline in under 20 seconds.
+  - Built by an agent loop: Sonnet subagents write routine parts, Opus the complex logic, acceptance by diff, pytest and curl on staging.
 - Stack: Python 3.12, FastAPI, aiogram 3, SQLAlchemy 2, SQLite, Alembic, React 18, Vite, TypeScript, Tailwind.
 - Links: Code https://github.com/shorokhlev-sketch/telegram-store
 
 RU
+- Title: Магазин в Telegram
 - Kind: Telegram Mini App и бот, клиентский проект в работе
 - Result: Магазин б/у техники Apple внутри Telegram. Продавец заполняет один мастер в боте, и лот сразу появляется в канале, в Mini App и на сайте. После продажи лот исчезает везде.
 - Facts:
   - Одно React-приложение работает как Telegram Mini App и как сайт. Запросы Mini App проверяются по HMAC от initData Telegram.
   - Мастер в боте: фото, вложенный выбор модели, состояние, цена и превью поста в канале один в один.
-  - 340 тестов проходят офлайн за 11 секунд. Тест-сторож падает на любом эмодзи в текстах бота.
-  - Собран агентным циклом: сабагенты Sonnet пишут рутину, Opus сложную логику, приёмка по диффу, pytest и curl на стейджинге. 51 коммит за 5 рабочих дней.
+  - 340 тестов проходят офлайн меньше чем за 20 секунд.
+  - Собран агентным циклом: сабагенты Sonnet пишут рутину, Opus сложную логику, приёмка по диффу, pytest и curl на стейджинге.
 - Stack: same as EN.
 - Links: Код
 
@@ -144,24 +150,22 @@ RU
 ### 05 26 MAISI
 
 EN
-- Kind: Sales site and CRM, client project
-- Result: Sells apartments in a 26 floor residential tower in Batumi and tracks every lead to its source.
+- Kind: Sales site and CRM, client project in progress
+- Result: Apartment picker and lead tracking for a 26 floor residential tower in Batumi, before sales start.
 - Facts:
   - Apartment picker over 279 units: 3D, floor plans, a sales grid and a PDF plan for every unit.
   - CRM with agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
   - Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.
-  - CRM v0.1 went from schema to production in 2 hours 40 minutes.
 - Stack: JavaScript, Node.js, Fastify, SQLite, nginx.
 - Links: Site https://lab.prfo.design/maisi/ | Site code https://github.com/shorokhlev-sketch/apartment-picker | CRM code https://github.com/shorokhlev-sketch/realestate-crm
 
 RU
-- Kind: Сайт продаж и CRM, клиентский проект
-- Result: Продаёт квартиры в 26-этажной башне в Батуми и ведёт каждую заявку до источника.
+- Kind: Сайт продаж и CRM, клиентский проект в работе
+- Result: Подбор квартир и учёт заявок для 26-этажной башни в Батуми, до старта продаж.
 - Facts:
   - Подбор по 279 квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.
   - CRM: реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
   - Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.
-  - CRM v0.1 прошла путь от схемы до продакшна за 2 часа 40 минут.
 - Stack: same as EN.
 - Links: Сайт | Код сайта | Код CRM
 
@@ -178,6 +182,7 @@ EN
 - Links: Visuals https://prfo.design/visual/ | Code https://github.com/shorokhlev-sketch/ai-video-pipeline
 
 RU
+- Title: AI-видеопродакшн
 - Kind: AI-изображения и видео на Higgsfield
 - Result: Фэшн- и продуктовые ролики без пластикового AI-вида. Claude генерирует кадры и клипы, а я принимаю каждый кадр на живой раскадровке до генерации видео.
 - Facts:
@@ -220,8 +225,8 @@ Labels of the mode switch in each project scene, in segment order. Phones show t
 - RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры
 
 02 Trade System
-- EN desktop: Sales, AI inbox, Trip, Price list
-- RU desktop: Продажи, AI-инбокс, Рейс, Прайс-лист
+- EN desktop: AI inbox, Sales, Trip, Price list
+- RU desktop: AI-инбокс, Продажи, Рейс, Прайс-лист
 
 03 Telegram store
 - EN desktop: Catalog, Search, Lot, Design board
