@@ -80,28 +80,29 @@ PROJECTS = [
         'mob': [('settlements', 'Settlements', 'Взаиморасчёты'), ('sales', 'Sales', 'Продажи')],
     },
     {
-        'n': '02', 'slug': 'maisi', 'title': '26 MAISI',
-        'kind': {'en': 'Sales site and CRM, client project in progress', 'ru': 'Сайт продаж и CRM, клиентский проект в работе'},
-        'result': {'en': 'Apartment picker and lead tracking for a **26** floor residential tower in Batumi, before sales start.',
-                   'ru': 'Подбор квартир и учёт заявок для **26**-этажной башни в Батуми, до старта продаж.'},
+        'n': '02', 'slug': 'maisi', 'title': '26 MAISI CRM',
+        'kind': {'en': 'CRM and sales site, client project in progress', 'ru': 'CRM и сайт продаж, клиентский проект в работе'},
+        'result': {'en': 'CRM for a **26** floor residential tower in Batumi: every lead is tracked to its source, before sales start.',
+                   'ru': 'CRM для **26**-этажной башни в Батуми: каждая заявка ведётся до источника, до старта продаж.'},
         'facts': {'en': [
-            'Apartment picker over **279** units: 3D, floor plans, a sales grid and a PDF plan for every unit.',
-            'CRM with agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
-            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.'],
+            'Agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
+            'Every agent has a cabinet with a personal link and their own clicks and leads.',
+            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.',
+            'The sales site feeds it: apartment picker over **279** units with floor plans and a PDF plan for every unit.'],
             'ru': [
-            'Подбор по **279** квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.',
-            'CRM: реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
-            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.']},
+            'Реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
+            'У каждого агента кабинет с личной ссылкой и своими кликами и заявками.',
+            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.',
+            'Заявки приходят с сайта продаж: подбор по **279** квартирам, планы этажей и PDF-план на каждую квартиру.']},
         'stack': 'JavaScript, Node.js, Fastify, SQLite, nginx.',
         'links': [
+            {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
             {'href': 'https://lab.prfo.design/maisi/', 'label': {'en': 'Site', 'ru': 'Сайт'}},
             {'href': 'https://github.com/shorokhlev-sketch/apartment-picker', 'label': {'en': 'Site code', 'ru': 'Код сайта'}},
-            {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
         ],
-        # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
-        # 3D last (Lev 2026-09-30): its frames carry the PLACEHOLDER lattice, a buyer sees the real plans first
-        'desk': [('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
-                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM'), ('3d', '3D', '3D')],
+        # CRM first (Lev 2026-09-30: the case sells the CRM, not the picker); grid and the PLACEHOLDER 3D are dropped
+        'desk': [('crm', 'CRM', 'CRM'), ('agent', 'Agent cabinet', 'Кабинет агента'),
+                 ('floorplan-status', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
         'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {

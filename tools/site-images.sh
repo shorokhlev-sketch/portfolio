@@ -117,6 +117,7 @@ m matscout structure-3d "$S/matscout/mobile-02-3d-viewer.png"
 # border (x 440-441), so the content padding is 62 px left and 64 px right, and above the Active leads card (its border starts at y 1490).
 # CRM: admin dashboard of a local run on the demo seed (scratchpad pw/crm-admin.mjs), 1440x900 at 2x, with the sidebar
 d maisi crm "$S/maisi-crm/crm-admin-dashboard.png"
+d maisi agent "$S/maisi-crm/crm-agent-cabinet-2x.png"
 
 # Content Factory: captures from the live demo by tools/factory-shoot.mjs (shots/factory/index.json).
 # The app header above the sticky step bar (41 css px: the topbar and the strip under it where scrolled content shows) is cut.

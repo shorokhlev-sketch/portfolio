@@ -71,27 +71,30 @@ RU
 - Stack: same as EN.
 - Links: Демо | OCR-бот | Код OCR
 
-### 02 26 MAISI
+### 02 26 MAISI CRM
 
 EN
-- Kind: Sales site and CRM, client project in progress
-- Result: Apartment picker and lead tracking for a 26 floor residential tower in Batumi, before sales start.
+- Kind: CRM and sales site, client project in progress
+- Result: CRM for a 26 floor residential tower in Batumi: every lead is tracked to its source, before sales start.
 - Facts:
-  - Apartment picker over 279 units: 3D, floor plans, a sales grid and a PDF plan for every unit.
-  - CRM with agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
+  - Agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
+  - Every agent has a cabinet with a personal link and their own clicks and leads.
   - Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.
+  - The sales site feeds it: apartment picker over 279 units with floor plans and a PDF plan for every unit.
 - Stack: JavaScript, Node.js, Fastify, SQLite, nginx.
-- Links: Site https://lab.prfo.design/maisi/ | Site code https://github.com/shorokhlev-sketch/apartment-picker | CRM code https://github.com/shorokhlev-sketch/realestate-crm
+- Links: CRM code https://github.com/shorokhlev-sketch/realestate-crm | Site https://lab.prfo.design/maisi/ | Site code https://github.com/shorokhlev-sketch/apartment-picker
 
 RU
-- Kind: Сайт продаж и CRM, клиентский проект в работе
-- Result: Подбор квартир и учёт заявок для 26-этажной башни в Батуми, до старта продаж.
+- Title: 26 MAISI CRM
+- Kind: CRM и сайт продаж, клиентский проект в работе
+- Result: CRM для 26-этажной башни в Батуми: каждая заявка ведётся до источника, до старта продаж.
 - Facts:
-  - Подбор по 279 квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.
-  - CRM: реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
+  - Реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
+  - У каждого агента кабинет с личной ссылкой и своими кликами и заявками.
   - Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.
+  - Заявки приходят с сайта продаж: подбор по 279 квартирам, планы этажей и PDF-план на каждую квартиру.
 - Stack: same as EN.
-- Links: Сайт | Код сайта | Код CRM
+- Links: Код CRM | Сайт | Код сайта
 
 ### 03 Floor plan pipeline
 
@@ -224,9 +227,9 @@ Labels of the mode switch in each project scene, in segment order. Phones show t
 - EN desktop: AI inbox, Sales, Trip, Price list
 - RU desktop: AI-инбокс, Продажи, Рейс, Прайс-лист
 
-02 26 MAISI
-- EN desktop: Floor plans, Grid, Unit, CRM, 3D
-- RU desktop: Планы этажей, Шахматка, Квартира, CRM, 3D
+02 26 MAISI CRM
+- EN desktop: CRM, Agent cabinet, Floor plans, Unit
+- RU desktop: CRM, Кабинет агента, Планы этажей, Квартира
 
 03 Floor plan pipeline
 - EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor
