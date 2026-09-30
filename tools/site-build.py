@@ -80,7 +80,32 @@ PROJECTS = [
         'mob': [('settlements', 'Settlements', 'Взаиморасчёты'), ('sales', 'Sales', 'Продажи')],
     },
     {
-        'n': '02', 'slug': 'floorplans', 'title': 'Floor plan pipeline', 'title_ru': 'Конвейер планировок',
+        'n': '02', 'slug': 'maisi', 'title': '26 MAISI',
+        'kind': {'en': 'Sales site and CRM, client project in progress', 'ru': 'Сайт продаж и CRM, клиентский проект в работе'},
+        'result': {'en': 'Apartment picker and lead tracking for a **26** floor residential tower in Batumi, before sales start.',
+                   'ru': 'Подбор квартир и учёт заявок для **26**-этажной башни в Батуми, до старта продаж.'},
+        'facts': {'en': [
+            'Apartment picker over **279** units: 3D, floor plans, a sales grid and a PDF plan for every unit.',
+            'CRM with agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
+            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.'],
+            'ru': [
+            'Подбор по **279** квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.',
+            'CRM: реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
+            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.']},
+        'stack': 'JavaScript, Node.js, Fastify, SQLite, nginx.',
+        'links': [
+            {'href': 'https://lab.prfo.design/maisi/', 'label': {'en': 'Site', 'ru': 'Сайт'}},
+            {'href': 'https://github.com/shorokhlev-sketch/apartment-picker', 'label': {'en': 'Site code', 'ru': 'Код сайта'}},
+            {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
+        ],
+        # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
+        # 3D last (Lev 2026-09-30): its frames carry the PLACEHOLDER lattice, a buyer sees the real plans first
+        'desk': [('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
+                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM'), ('3d', '3D', '3D')],
+        'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
+    },
+    {
+        'n': '03', 'slug': 'floorplans', 'title': 'Floor plan pipeline', 'title_ru': 'Конвейер планировок',
         'kind': {'en': 'Agent pipeline, client project', 'ru': 'Агентный конвейер, клиентский проект'},
         'result': {'en': 'Turns a **114** page architectural PDF into clean vector plans for **279** apartments on **25** floors.',
                    'ru': 'Превращает архитектурный PDF на **114** страниц в чистые векторные планы **279** квартир на **25** этажах.'},
@@ -111,7 +136,7 @@ PROJECTS = [
         'mpos': 'center',
     },
     {
-        'n': '03', 'slug': 'tgstore', 'title': 'Telegram store', 'title_ru': 'Магазин в Telegram',
+        'n': '04', 'slug': 'tgstore', 'title': 'Telegram store', 'title_ru': 'Магазин в Telegram',
         'kind': {'en': 'Telegram Mini App and bot, client project in progress', 'ru': 'Telegram Mini App и бот, клиентский проект в работе'},
         'result': {'en': 'A shop for used Apple devices inside Telegram. The seller fills in one bot wizard and the lot goes to the channel, the Mini App and the website at once. A sale removes it everywhere.',
                    'ru': 'Магазин б/у техники Apple внутри Telegram. Продавец заполняет один мастер в боте, и лот сразу появляется в канале, в Mini App и на сайте. После продажи лот исчезает везде.'},
@@ -137,7 +162,7 @@ PROJECTS = [
                 ('request', 'Request', 'Заявка')],
     },
     {
-        'n': '04', 'slug': 'factory', 'title': 'Content Factory',
+        'n': '05', 'slug': 'factory', 'title': 'Content Factory',
         'kind': {'en': 'LLM video pipeline', 'ru': 'LLM-конвейер для видео'},
         'result': {'en': 'Cuts a **23** minute episode into **5 to 7** vertical clips with burned subtitles for about **$0.27** in API cost.',
                    'ru': 'Режет **23**-минутную серию на **5-7** вертикальных клипов с вшитыми субтитрами примерно за **$0,27** на API.'},
@@ -159,31 +184,6 @@ PROJECTS = [
         'desk': [('scenes', 'Scenes', 'Сцены'), ('subtitles', 'Subtitles', 'Субтитры'),
                  ('clips', 'Clips', 'Клипы'), ('trim', 'Trim', 'Обрезка')],
         'mob': [('scenes', 'Scenes', 'Сцены'), ('subtitles', 'Subtitles', 'Субтитры'), ('clips', 'Clips', 'Клипы')],
-    },
-    {
-        'n': '05', 'slug': 'maisi', 'title': '26 MAISI',
-        'kind': {'en': 'Sales site and CRM, client project in progress', 'ru': 'Сайт продаж и CRM, клиентский проект в работе'},
-        'result': {'en': 'Apartment picker and lead tracking for a **26** floor residential tower in Batumi, before sales start.',
-                   'ru': 'Подбор квартир и учёт заявок для **26**-этажной башни в Батуми, до старта продаж.'},
-        'facts': {'en': [
-            'Apartment picker over **279** units: 3D, floor plans, a sales grid and a PDF plan for every unit.',
-            'CRM with agent referral links, **90** day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.',
-            'Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.'],
-            'ru': [
-            'Подбор по **279** квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.',
-            'CRM: реферальные ссылки агентов, атрибуция по первому касанию на **90** дней, UTM и click ID, CPL, CAC и ROAS.',
-            'Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.']},
-        'stack': 'JavaScript, Node.js, Fastify, SQLite, nginx.',
-        'links': [
-            {'href': 'https://lab.prfo.design/maisi/', 'label': {'en': 'Site', 'ru': 'Сайт'}},
-            {'href': 'https://github.com/shorokhlev-sketch/apartment-picker', 'label': {'en': 'Site code', 'ru': 'Код сайта'}},
-            {'href': 'https://github.com/shorokhlev-sketch/realestate-crm', 'label': {'en': 'CRM code', 'ru': 'Код CRM'}},
-        ],
-        # 3D view: the AI tower frames carry a PLACEHOLDER lattice until the architect's model arrives
-        # 3D last (Lev 2026-09-30): its frames carry the PLACEHOLDER lattice, a buyer sees the real plans first
-        'desk': [('floorplan-status', 'Floor plans', 'Планы этажей'), ('grid', 'Grid', 'Шахматка'),
-                 ('unit-detail', 'Unit', 'Квартира'), ('crm', 'CRM', 'CRM'), ('3d', '3D', '3D')],
-        'mob': [('3d', '3D', '3D'), ('floorplan', 'Floor plans', 'Планы этажей'), ('unit-detail', 'Unit', 'Квартира')],
     },
     {
         'n': '06', 'slug': 'aivisual', 'title': 'AI video production', 'title_ru': 'AI-видеопродакшн',

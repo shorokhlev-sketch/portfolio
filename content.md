@@ -37,7 +37,7 @@ RU
 
 ---
 
-## Projects (order is fixed: Trade System first for the business buyer, Lev 2026-09-30)
+## Projects (order is fixed: Trade System first, 26 MAISI second for the business buyer, Lev 2026-09-30)
 
 RU titles: a project without a RU Title line keeps its EN title in Russian.
 
@@ -71,7 +71,29 @@ RU
 - Stack: same as EN.
 - Links: Демо | OCR-бот | Код OCR
 
-### 02 Floor plan pipeline
+### 02 26 MAISI
+
+EN
+- Kind: Sales site and CRM, client project in progress
+- Result: Apartment picker and lead tracking for a 26 floor residential tower in Batumi, before sales start.
+- Facts:
+  - Apartment picker over 279 units: 3D, floor plans, a sales grid and a PDF plan for every unit.
+  - CRM with agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
+  - Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.
+- Stack: JavaScript, Node.js, Fastify, SQLite, nginx.
+- Links: Site https://lab.prfo.design/maisi/ | Site code https://github.com/shorokhlev-sketch/apartment-picker | CRM code https://github.com/shorokhlev-sketch/realestate-crm
+
+RU
+- Kind: Сайт продаж и CRM, клиентский проект в работе
+- Result: Подбор квартир и учёт заявок для 26-этажной башни в Батуми, до старта продаж.
+- Facts:
+  - Подбор по 279 квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.
+  - CRM: реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
+  - Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.
+- Stack: same as EN.
+- Links: Сайт | Код сайта | Код CRM
+
+### 03 Floor plan pipeline
 
 EN
 - Kind: Agent pipeline, client project
@@ -98,7 +120,7 @@ RU
 - Stack: same as EN.
 - Links: Этажи вживую | Код
 
-### 03 Telegram store
+### 04 Telegram store
 
 EN
 - Kind: Telegram Mini App and bot, client project in progress
@@ -123,7 +145,7 @@ RU
 - Stack: same as EN.
 - Links: Код
 
-### 04 Content Factory
+### 05 Content Factory
 
 EN
 - Kind: LLM video pipeline
@@ -146,28 +168,6 @@ RU
   - Интерфейс ревью: живые логи по SSE, ручки обрезки, редактор баннера, очередь рендера, публикация в Telegram.
 - Stack: same as EN.
 - Links: Живое демо | Код
-
-### 05 26 MAISI
-
-EN
-- Kind: Sales site and CRM, client project in progress
-- Result: Apartment picker and lead tracking for a 26 floor residential tower in Batumi, before sales start.
-- Facts:
-  - Apartment picker over 279 units: 3D, floor plans, a sales grid and a PDF plan for every unit.
-  - CRM with agent referral links, 90 day first touch attribution, UTM and click ID tracking, CPL, CAC and ROAS.
-  - Lead dedupe by phone or Telegram. Apartment statuses sync back to the site.
-- Stack: JavaScript, Node.js, Fastify, SQLite, nginx.
-- Links: Site https://lab.prfo.design/maisi/ | Site code https://github.com/shorokhlev-sketch/apartment-picker | CRM code https://github.com/shorokhlev-sketch/realestate-crm
-
-RU
-- Kind: Сайт продаж и CRM, клиентский проект в работе
-- Result: Подбор квартир и учёт заявок для 26-этажной башни в Батуми, до старта продаж.
-- Facts:
-  - Подбор по 279 квартирам: 3D, планы этажей, шахматка и PDF-план на каждую квартиру.
-  - CRM: реферальные ссылки агентов, атрибуция по первому касанию на 90 дней, UTM и click ID, CPL, CAC и ROAS.
-  - Дедупликация заявок по телефону или Telegram. Статусы квартир синхронизируются с сайтом.
-- Stack: same as EN.
-- Links: Сайт | Код сайта | Код CRM
 
 ### 06 AI video production
 
@@ -224,21 +224,21 @@ Labels of the mode switch in each project scene, in segment order. Phones show t
 - EN desktop: AI inbox, Sales, Trip, Price list
 - RU desktop: AI-инбокс, Продажи, Рейс, Прайс-лист
 
-02 Floor plan pipeline
+02 26 MAISI
+- EN desktop: Floor plans, Grid, Unit, CRM, 3D
+- RU desktop: Планы этажей, Шахматка, Квартира, CRM, 3D
+
+03 Floor plan pipeline
 - EN desktop: Floor plan, 2BR 2201, Studio 1005, PDF layers, Unit editor
 - RU desktop: План этажа, 2BR 2201, Студия 1005, Слои PDF, Редактор квартиры
 
-03 Telegram store
+04 Telegram store
 - EN desktop: Catalog, Search, Lot, Design board
 - RU desktop: Каталог, Поиск, Лот, Доска дизайна
 
-04 Content Factory
+05 Content Factory
 - EN desktop: Scenes, Subtitles, Clips, Trim
 - RU desktop: Сцены, Субтитры, Клипы, Обрезка
-
-05 26 MAISI
-- EN desktop: Floor plans, Grid, Unit, CRM, 3D
-- RU desktop: Планы этажей, Шахматка, Квартира, CRM, 3D
 
 06 AI video production
 - EN desktop: Copper, Stone, Porcelain, Technics, Storyboard
