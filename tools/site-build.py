@@ -643,6 +643,12 @@ print('dashes:', len(bad))
 if missing or bad:
     sys.exit(1)
 
+# cache busting: the page names each script by a hash of its content, so a new page never runs with an old dictionary
+import hashlib
+_v = lambda b: hashlib.sha1(b).hexdigest()[:10]
+page = page.replace('src="assets/js/i18n.js"', f'src="assets/js/i18n.js?v={_v(i18n_js.encode())}"')
+page = page.replace('src="assets/js/page.js"', f'src="assets/js/page.js?v={_v(open(ROOT + "/assets/js/page.js", "rb").read())}"')
+
 with open(ROOT + '/index.html', 'w') as f:
     f.write(page)
 
